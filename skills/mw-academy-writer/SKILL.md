@@ -21,14 +21,26 @@ The common thread: these are **investors first, art enthusiasts second** (if at 
 
 ## Voice & Tone
 
-Think **Bloomberg meets Artnet**. Authoritative, data-forward, occasionally opinionated where the data supports it. Not academic — no one is submitting this to a journal. Not casual — no one is reading this on Instagram. The sweet spot is a well-sourced analyst note that happens to be about art.
+Think **Bloomberg meets Artnet**. Authoritative, data-forward, occasionally opinionated where the data supports it. Not academic, not casual. The sweet spot is a well-sourced analyst note that happens to be about art.
 
 - Use active voice and direct statements
 - Lead with conclusions, then support with evidence
-- Be specific — "$88.5M" not "nearly $90 million", "7.3% annualized" not "strong returns"
+- Be specific: "$88.5M" not "nearly $90 million", "7.3% annualized" not "strong returns"
 - It's OK to have a point of view. "The data suggests X" is weaker than "X, based on [evidence]"
 - Avoid hedge-word soup ("it could potentially perhaps be argued that...")
 - No emojis, no exclamation marks, no clickbait
+
+### Strict Style Rules
+
+These rules are non-negotiable. Every draft must follow them.
+
+1. **Never use em dashes or en dashes.** No `—` or `–` anywhere in the text. Use a comma, a period, or restructure the sentence instead. This applies to every context: asides, lists, attributions, parenthetical thoughts. If you catch yourself reaching for a dash, rewrite.
+
+2. **Never use "it's not X, it's Y" rhetorical constructions.** Don't write "The pattern is not collapse, it is maturation" or "This isn't speculation, it's strategy" or any variant. These feel clever but read as hollow. Just state the thing directly. Say what it *is*, not what it isn't.
+
+3. **Prefer short, plain, Saxon-rooted words over long Latinate ones.** Choose "buy" over "acquire", "help" over "facilitate", "use" over "utilize", "show" over "demonstrate", "begin" over "commence", "end" over "terminate", "get" over "obtain", "think" over "conceptualize". Every word should be the shortest, most common word that carries the meaning. The reader should never feel like you're reaching for a bigger word than the idea needs.
+
+4. **Only cite sources from the last 12 months.** Never reference data, reports, or articles published more than 12 months before the current date. If the best available data is older than 12 months, flag it with `[NEEDS UPDATED DATA]` and note the most recent figure you found alongside its date. The reader expects current information, and stale data undermines credibility. When in doubt, prefer the most recently published source available.
 
 ## Input
 
@@ -128,7 +140,7 @@ Then expand with a sentence that frames why this matters to investors specifical
 
 **Example for "Can Art Be Used as Collateral for Loans?":**
 
-> Art-backed lending allows collectors and investors to borrow against the appraised value of their artwork, typically at 50–60% loan-to-value ratios through specialized lenders and private banks. The market for art-secured loans has grown to an estimated $24–28 billion globally, driven by rising art values and increasing lender comfort with fine art as collateral. For investors, understanding this mechanism matters because it transforms an illiquid asset into a source of liquidity without triggering a taxable sale — but the risks are real and often misunderstood.
+> Art-backed lending allows collectors and investors to borrow against the appraised value of their artwork, typically at 50 to 60% loan-to-value ratios through specialized lenders and private banks. The market for art-secured loans has grown to an estimated $24 to $28 billion globally, driven by rising art values and increasing lender comfort with fine art as collateral. For investors, this mechanism matters because it turns an illiquid asset into a source of liquidity without triggering a taxable sale, but the risks are real and often misunderstood.
 
 ### 3. Body Sections (H2s)
 
