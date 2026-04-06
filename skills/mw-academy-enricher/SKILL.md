@@ -126,23 +126,106 @@ The goal is clean, readable charts that look like they belong in a Bloomberg ter
 - Bar fills: same colors as lines, with 80% opacity
 - Source attribution: small text at bottom-left, `#E8E8E8`, 10px
 
-## Stage 5: Generate Social Media Graphics
+## Stage 5: Generate Social Media Package (SVGs + Copy)
 
-For each article, produce at minimum:
+For each article, produce a complete social media package: SVG visual assets (Figma-editable) AND platform-native copy for Instagram, LinkedIn, and Facebook.
 
-**OG Image** (1200x630): Article title in White on Background, one key data point in Frequency Purple, Masterworks wordmark in Frost at bottom.
+### 5a: SVG Visual Assets
 
-**Instagram Carousel** (1080x1080, 3-5 slides):
-- Slide 1: Title card with article headline
-- Slides 2-4: Key data points or mini-charts (simplified versions of the article visualizations)
-- Final slide: CTA ("Read more at masterworks.com/academy") with Masterworks branding
+All graphics are SVGs so the design team can open them in Figma, adjust, and export.
 
-Save to:
+**Instagram Carousel** (1080x1080, 3-5 slides, dark theme):
+- Slide 1: Title card with article headline, accent stripe, Masterworks Academy footer
+- Slides 2-4: One key stat per slide (big number + short label), pulled from the article's strongest data points
+- Final slide: CTA ("Read the full analysis at masterworks.com/academy") with branding
+
+Use the `generate_chart.py` script with `--type social-card` for each slide.
+
+**OG Image** (1200x630, dark theme): Article title + one key stat. Use for link previews on LinkedIn, Facebook, and Twitter/X.
+
+Save all SVGs to:
 ```
 content/social/{article-slug}/
 ```
 
-These are SVGs so the design team can open them in Figma, tweak, and export to PNG.
+### 5b: Platform-Native Copy
+
+For each platform, write ready-to-post copy following these rules. Save as a markdown file alongside the SVGs:
+```
+content/social/{article-slug}/copy.md
+```
+
+**Cross-platform rules:**
+- Masterworks appears in the bottom 30-40% of the post. The opening is standalone market insight that earns attention before any brand mention.
+- One big idea per post. Pick the sharpest data point from the article.
+- Use precise numbers (16%, $25.4M, 2.7x), not round approximations.
+- No em dashes. Use commas.
+- "Artworks" not "paintings". "Invest in" not "buy". "Featuring [artist]" not "by [artist]".
+- Every post that mentions Masterworks, performance, or investing must include: "See important Reg A disclosures at masterworks.com/cd"
+- If citing specific return percentages, use full disclosure: "Investing involves risk. Past performance is not indicative of future returns. See important disclosures at masterworks.com/cd"
+
+**Instagram:**
+- Tone: accessible, educational
+- Caption: 150-300 words, 2nd person ("your portfolio"), short sentences (10-15 words)
+- Hashtags: 15-20, placed after the disclosure line
+- Reference which carousel slides go with the caption
+- Emojis: 2-3 max, placed strategically (not as bullets)
+
+**LinkedIn:**
+- Tone: authoritative, analytical
+- Post: 200-400 words, 1st person ("We found", "Our data shows")
+- Medium sentences (15-25 words), no emojis
+- Hashtags: 3-5, at the end
+- Include a discussion question to drive comments
+- Link to the article at the end
+
+**Facebook:**
+- Tone: conversational, direct
+- Post: 100-200 words, 1st person
+- Medium-short sentences (12-18 words)
+- 0-1 emojis, 0-2 hashtags
+- Link to the article prominently
+
+### Copy file format
+
+```markdown
+# Social Copy: [Article Title]
+
+## Instagram
+
+### Caption
+[full caption text, ready to copy-paste]
+
+### Hashtags
+[hashtag block]
+
+### Carousel Notes
+Slide 1: carousel-1-headline.svg
+Slide 2: carousel-2-[topic].svg
+...
+
+---
+
+## LinkedIn
+
+### Post
+[full post text]
+
+---
+
+## Facebook
+
+### Post
+[full post text]
+
+---
+
+## Compliance
+- Instagram: PASS/FLAG
+- LinkedIn: PASS/FLAG
+- Facebook: PASS/FLAG
+- Notes: [anything needing human review]
+```
 
 ## Output Summary
 
