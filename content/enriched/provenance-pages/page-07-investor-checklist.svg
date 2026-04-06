@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">06 — WHAT INVESTORS SHOULD CHECK</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="140" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Provenance due diligence is not optional for anyone treating art</tspan>
+    <tspan x="72" dy="25">as a financial asset. Here is what to look for.</tspan>
+  </text>
+
+  <!-- Bullet list -->
+  <text x="72" y="220" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">&#x2022;  Ask to see the full provenance before you commit to a</tspan>
+    <tspan x="86" dy="25">purchase. If a seller says they will share it only after you</tspan>
+    <tspan x="86" dy="25">buy, walk away.</tspan>
+  </text>
+
+  <text x="72" y="310" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">&#x2022;  Check that the documentation specifically describes the</tspan>
+    <tspan x="86" dy="25">work, including dimensions, medium, date, and title.</tspan>
+  </text>
+
+  <text x="72" y="380" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">&#x2022;  Look for original documents, not photocopies, unless the</tspan>
+    <tspan x="86" dy="25">originals are held at a known institution.</tspan>
+  </text>
+
+  <text x="72" y="445" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">&#x2022;  Cross-reference ownership claims against auction databases,</tspan>
+    <tspan x="86" dy="25">catalogues raisonne, and exhibition records.</tspan>
+  </text>
+
+  <text x="72" y="510" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">&#x2022;  Be wary of provenance that looks too clean. Most real</tspan>
+    <tspan x="86" dy="25">ownership chains have some gaps or unclear periods.</tspan>
+  </text>
+
+  <text x="72" y="575" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">&#x2022;  Run the work through the Art Loss Register or ask your</tspan>
+    <tspan x="86" dy="25">dealer to provide proof that they have done so.</tspan>
+  </text>
+
+  <text x="72" y="640" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">&#x2022;  For any work created before 1945 with European provenance,</tspan>
+    <tspan x="86" dy="25">investigate the ownership chain during the Nazi era specifically.</tspan>
+  </text>
+
+  <!-- Bar chart section -->
+  <text x="72" y="740" font-family="Inter" font-size="18" font-weight="700" fill="#1a1a1a">Documentation Rarity</text>
+  <text x="72" y="765" font-family="DM Sans" font-size="13" fill="#777777">Percentage of auction paintings with each documentation type</text>
+
+  <!-- Bar 1: Pedigree 14% -->
+  <text x="72" y="810" font-family="DM Sans" font-size="13" fill="#444444">Pedigree</text>
+  <rect x="180" y="797" width="480" height="18" rx="2" fill="#f7f5f1"/>
+  <rect x="180" y="797" width="67" height="18" rx="2" fill="#1a1a1a"/>
+  <text x="256" y="811" font-family="Inter" font-size="12" font-weight="700" fill="#1a1a1a">14%</text>
+
+  <!-- Bar 2: Exhibition 5% -->
+  <text x="72" y="850" font-family="DM Sans" font-size="13" fill="#444444">Exhibition</text>
+  <rect x="180" y="837" width="480" height="18" rx="2" fill="#f7f5f1"/>
+  <rect x="180" y="837" width="24" height="18" rx="2" fill="#1a1a1a"/>
+  <text x="212" y="851" font-family="Inter" font-size="12" font-weight="700" fill="#1a1a1a">5%</text>
+
+  <!-- Bar 3: Literature 5% -->
+  <text x="72" y="890" font-family="DM Sans" font-size="13" fill="#444444">Literature</text>
+  <rect x="180" y="877" width="480" height="18" rx="2" fill="#f7f5f1"/>
+  <rect x="180" y="877" width="24" height="18" rx="2" fill="#1a1a1a"/>
+  <text x="212" y="891" font-family="Inter" font-size="12" font-weight="700" fill="#1a1a1a">5%</text>
+
+  <!-- Bar 4: Certificate 2% -->
+  <text x="72" y="930" font-family="DM Sans" font-size="13" fill="#444444">Certificate</text>
+  <rect x="180" y="917" width="480" height="18" rx="2" fill="#f7f5f1"/>
+  <rect x="180" y="917" width="10" height="18" rx="2" fill="#1a1a1a"/>
+  <text x="198" y="931" font-family="Inter" font-size="12" font-weight="700" fill="#1a1a1a">2%</text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">07</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="408" y="280" text-anchor="middle" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888" text-transform="uppercase">MASTERWORKS ACADEMY</text>
+
+  <!-- Title line 1: UNDERSTANDING -->
+  <text x="408" y="380" text-anchor="middle" font-family="Inter" font-size="38" font-weight="800" fill="#1a1a1a" letter-spacing="2px">UNDERSTANDING</text>
+
+  <!-- Title line 2: Provenance -->
+  <text x="408" y="440" text-anchor="middle" font-family="Cormorant Garamond" font-size="42" font-style="italic" font-weight="400" fill="#1a1a1a">Provenance</text>
+
+  <!-- Thin rule -->
+  <rect x="378" y="470" width="60" height="1" fill="#1a1a1a"/>
+
+  <!-- Lead paragraph -->
+  <text x="120" y="540" font-family="Cormorant Garamond" font-size="22" fill="#1a1a1a">
+    <tspan x="120" dy="0">Provenance is the documented chain of ownership for a</tspan>
+    <tspan x="120" dy="36">work of art, tracing who bought, sold, inherited, or</tspan>
+    <tspan x="120" dy="36">donated it from the time it left the artist's studio to the</tspan>
+    <tspan x="120" dy="36">present day. For investors, provenance is one of the</tspan>
+    <tspan x="120" dy="36">strongest price signals in the market.</tspan>
+  </text>
+
+  <!-- Subtitle text -->
+  <text x="120" y="760" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="120" dy="0">A 2022 study published in Management Science found that works</tspan>
+    <tspan x="120" dy="25">with strong provenance records sell for hammer price premiums</tspan>
+    <tspan x="120" dy="25">of up to 54%, while also boosting annualized returns by 5% to</tspan>
+    <tspan x="120" dy="25">16%. This article covers how provenance affects pricing, what</tspan>
+    <tspan x="120" dy="25">verification looks like in practice, and what to check before</tspan>
+    <tspan x="120" dy="25">you buy.</tspan>
+  </text>
+
+  <!-- Bottom center URL -->
+  <text x="408" y="980" text-anchor="middle" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">MASTERWORKS.COM/ACADEMY</text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">01</text>
+</svg>

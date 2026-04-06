@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">01 — WHAT PROVENANCE INCLUDES</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="140" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">A provenance record is more than a list of former owners. It can</tspan>
+    <tspan x="72" dy="25">include sales receipts, auction records, exhibition catalogs, gallery</tspan>
+    <tspan x="72" dy="25">invoices, published references in catalogues raisonne, appraisals,</tspan>
+    <tspan x="72" dy="25">photographs, and correspondence. Each piece of paper ties the</tspan>
+    <tspan x="72" dy="25">physical object to a specific person at a specific time.</tspan>
+  </text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="310" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">The academic literature breaks provenance into four dimensions,</tspan>
+    <tspan x="72" dy="25">each of which affects price independently. Those figures come from</tspan>
+    <tspan x="72" dy="25">an analysis of nearly three million auction transactions, published</tspan>
+    <tspan x="72" dy="25">in European Financial Management in 2022.</tspan>
+  </text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="450" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Not every work carries all four. In that same dataset, only about</tspan>
+    <tspan x="72" dy="25">14% of paintings came with pedigree records, 5% had exhibition</tspan>
+    <tspan x="72" dy="25">histories, 5% appeared in art literature, and just 2% included</tspan>
+    <tspan x="72" dy="25">certificates. The rarity of complete documentation is part of why</tspan>
+    <tspan x="72" dy="25">it commands such a premium.</tspan>
+  </text>
+
+  <!-- 2x2 Stat card grid -->
+  <!-- Card 1: Literature +54% -->
+  <rect x="72" y="620" width="320" height="160" rx="0" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="92" y="668" font-family="Inter" font-size="36" font-weight="800" fill="#1a1a1a">+54%</text>
+  <text x="92" y="698" font-family="Inter" font-size="12" font-weight="600" letter-spacing="3px" fill="#888888">LITERATURE</text>
+  <text x="92" y="724" font-family="DM Sans" font-size="13" fill="#777777">
+    <tspan x="92" dy="0">Published references in</tspan>
+    <tspan x="92" dy="20">catalogues raisonne</tspan>
+  </text>
+
+  <!-- Card 2: Exhibition +42% -->
+  <rect x="424" y="620" width="320" height="160" rx="0" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="444" y="668" font-family="Inter" font-size="36" font-weight="800" fill="#1a1a1a">+42%</text>
+  <text x="444" y="698" font-family="Inter" font-size="12" font-weight="600" letter-spacing="3px" fill="#888888">EXHIBITION</text>
+  <text x="444" y="724" font-family="DM Sans" font-size="13" fill="#777777">
+    <tspan x="444" dy="0">Museum or gallery</tspan>
+    <tspan x="444" dy="20">exhibition history</tspan>
+  </text>
+
+  <!-- Card 3: Pedigree +21% -->
+  <rect x="72" y="810" width="320" height="160" rx="0" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="92" y="858" font-family="Inter" font-size="36" font-weight="800" fill="#1a1a1a">+21%</text>
+  <text x="92" y="888" font-family="Inter" font-size="12" font-weight="600" letter-spacing="3px" fill="#888888">PEDIGREE</text>
+  <text x="92" y="914" font-family="DM Sans" font-size="13" fill="#777777">
+    <tspan x="92" dy="0">Named former owners,</tspan>
+    <tspan x="92" dy="20">recent sale records</tspan>
+  </text>
+
+  <!-- Card 4: Certificate +14% -->
+  <rect x="424" y="810" width="320" height="160" rx="0" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="444" y="858" font-family="Inter" font-size="36" font-weight="800" fill="#1a1a1a">+14%</text>
+  <text x="444" y="888" font-family="Inter" font-size="12" font-weight="600" letter-spacing="3px" fill="#888888">CERTIFICATE</text>
+  <text x="444" y="914" font-family="DM Sans" font-size="13" fill="#777777">
+    <tspan x="444" dy="0">Formal authentication</tspan>
+    <tspan x="444" dy="20">document</tspan>
+  </text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">02</text>
+</svg>

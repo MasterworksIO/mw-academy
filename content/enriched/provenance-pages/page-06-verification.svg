@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">05 — HOW VERIFICATION WORKS</text>
+
+  <!-- Subheading -->
+  <text x="72" y="140" font-family="Inter" font-size="18" font-weight="700" fill="#1a1a1a">Auction House Due Diligence</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="180" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Christie's and Sotheby's both employ teams of specialists who</tspan>
+    <tspan x="72" dy="25">research ownership chains before accepting a consignment. The</tspan>
+    <tspan x="72" dy="25">standard process involves several steps.</tspan>
+  </text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="290" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">The consignor provides whatever documentation they have:</tspan>
+    <tspan x="72" dy="25">receipts, prior auction records, gallery invoices, family records.</tspan>
+    <tspan x="72" dy="25">The auction house's research department then tries to fill gaps,</tspan>
+    <tspan x="72" dy="25">checking published catalogs, exhibition records, and their own</tspan>
+    <tspan x="72" dy="25">archives of past sales.</tspan>
+  </text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="430" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Every work above a certain value threshold gets checked against</tspan>
+    <tspan x="72" dy="25">the Art Loss Register, a private database of over 700,000 stolen,</tspan>
+    <tspan x="72" dy="25">missing, and looted items. The ALR runs more than 400,000</tspan>
+    <tspan x="72" dy="25">searches per year on behalf of more than 130 subscribing auction</tspan>
+    <tspan x="72" dy="25">houses, dealers, and museums. If a work matches an entry, the</tspan>
+    <tspan x="72" dy="25">sale stops until the claim is resolved.</tspan>
+  </text>
+
+  <!-- Body text block 4 -->
+  <text x="72" y="600" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">These checks are good but not perfect. Auction houses face a</tspan>
+    <tspan x="72" dy="25">conflict of interest: they earn commissions on sales, so flagging</tspan>
+    <tspan x="72" dy="25">a provenance problem costs them money directly. Buyers should</tspan>
+    <tspan x="72" dy="25">treat auction house due diligence as a starting point, not a</tspan>
+    <tspan x="72" dy="25">guarantee.</tspan>
+  </text>
+
+  <!-- Subheading 2 -->
+  <text x="72" y="760" font-family="Inter" font-size="18" font-weight="700" fill="#1a1a1a">Digital Provenance and Blockchain</text>
+
+  <!-- Body text block 5 -->
+  <text x="72" y="800" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Blockchain-based provenance tracking has moved from theory to</tspan>
+    <tspan x="72" dy="25">limited practice. Platforms like Verisart (with over 250,000</tspan>
+    <tspan x="72" dy="25">artworks registered) and Artory create digital certificates of</tspan>
+    <tspan x="72" dy="25">authenticity tied to blockchain ledgers. Both Sotheby's and</tspan>
+    <tspan x="72" dy="25">Christie's now offer blockchain-verified provenance for some</tspan>
+    <tspan x="72" dy="25">high-value lots. A 2023 Deloitte report found that 78% of</tspan>
+    <tspan x="72" dy="25">collectors said they would pay more for art with</tspan>
+    <tspan x="72" dy="25">blockchain-verified provenance. These tools solve a real</tspan>
+    <tspan x="72" dy="25">problem, but they only work going forward.</tspan>
+  </text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">06</text>
+</svg>

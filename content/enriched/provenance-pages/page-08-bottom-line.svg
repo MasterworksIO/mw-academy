@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#f7f5f1"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">THE BOTTOM LINE</text>
+
+  <!-- Bullet 1 -->
+  <circle cx="84" cy="143" r="3.5" fill="#1a1a1a"/>
+  <text x="100" y="148" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="100" dy="0">Provenance, the documented ownership history of an artwork,</tspan>
+    <tspan x="100" dy="25">can add up to 54% to auction prices and boost annualized</tspan>
+    <tspan x="100" dy="25">returns by 5% to 16%, according to peer-reviewed research.</tspan>
+  </text>
+
+  <!-- Bullet 2 -->
+  <circle cx="84" cy="258" r="3.5" fill="#1a1a1a"/>
+  <text x="100" y="263" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="100" dy="0">Celebrity and collector provenance drives outsized results:</tspan>
+    <tspan x="100" dy="25">the Paul Allen sale brought $1.5 billion, and single-owner</tspan>
+    <tspan x="100" dy="25">auctions now account for nearly a third of major house volume.</tspan>
+  </text>
+
+  <!-- Bullet 3 -->
+  <circle cx="84" cy="373" r="3.5" fill="#1a1a1a"/>
+  <text x="100" y="378" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="100" dy="0">Gaps in provenance, especially during 1933 to 1945, create</tspan>
+    <tspan x="100" dy="25">real legal and financial risk. New restitution mechanisms in</tspan>
+    <tspan x="100" dy="25">Germany and France mean claims are getting easier to file,</tspan>
+    <tspan x="100" dy="25">not harder.</tspan>
+  </text>
+
+  <!-- Bullet 4 -->
+  <circle cx="84" cy="498" r="3.5" fill="#1a1a1a"/>
+  <text x="100" y="503" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="100" dy="0">Forged provenance is as dangerous as forged paintings. The</tspan>
+    <tspan x="100" dy="25">Beltracchi case proved that fabricated photographs, receipts,</tspan>
+    <tspan x="100" dy="25">and collector histories can fool experts for years.</tspan>
+  </text>
+
+  <!-- Bullet 5 -->
+  <circle cx="84" cy="603" r="3.5" fill="#1a1a1a"/>
+  <text x="100" y="608" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="100" dy="0">Auction house due diligence and the Art Loss Register</tspan>
+    <tspan x="100" dy="25">(700,000+ items, 400,000+ annual checks) provide baseline</tspan>
+    <tspan x="100" dy="25">protection, but buyers should treat them as a floor, not</tspan>
+    <tspan x="100" dy="25">a ceiling.</tspan>
+  </text>
+
+  <!-- Bullet 6 -->
+  <circle cx="84" cy="728" r="3.5" fill="#1a1a1a"/>
+  <text x="100" y="733" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="100" dy="0">Digital tools like blockchain provenance are gaining traction,</tspan>
+    <tspan x="100" dy="25">but they only track ownership going forward. For older works,</tspan>
+    <tspan x="100" dy="25">paper records and specialist research remain the standard.</tspan>
+  </text>
+
+  <!-- Thin rule separator -->
+  <rect x="72" y="830" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- FAQ intro -->
+  <text x="72" y="870" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">FREQUENTLY ASKED QUESTIONS</text>
+
+  <!-- FAQ 1 -->
+  <text x="72" y="910" font-family="Inter" font-size="14" font-weight="700" fill="#1a1a1a">What is provenance in art investing?</text>
+  <text x="72" y="940" font-family="DM Sans" font-size="13" fill="#444444">
+    <tspan x="72" dy="0">Provenance is the full ownership history of a work of art,</tspan>
+    <tspan x="72" dy="21">documented through sales records, exhibition catalogs, and</tspan>
+    <tspan x="72" dy="21">other evidence. Strong provenance increases both price and</tspan>
+    <tspan x="72" dy="21">liquidity, while weak provenance can reduce value by</tspan>
+    <tspan x="72" dy="21">double-digit percentages.</tspan>
+  </text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">08</text>
+</svg>

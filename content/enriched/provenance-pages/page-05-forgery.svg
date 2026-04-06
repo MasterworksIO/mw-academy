@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">04 — FORGERY AND FABRICATED PROVENANCE</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="140" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Provenance fraud is a separate but related threat. Wolfgang</tspan>
+    <tspan x="72" dy="25">Beltracchi, often called the most successful art forger since</tspan>
+    <tspan x="72" dy="25">World War II, sold more than 300 fake paintings attributed to</tspan>
+    <tspan x="72" dy="25">artists like Max Ernst, Fernand Leger, and Heinrich Campendonk.</tspan>
+    <tspan x="72" dy="25">He and his wife Helen were convicted in 2011 on charges tied</tspan>
+    <tspan x="72" dy="25">to 14 works sold for $45 million.</tspan>
+  </text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="320" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Their method was telling. Beltracchi did not just forge paintings.</tspan>
+    <tspan x="72" dy="25">He forged the provenance. The couple bought old frames and</tspan>
+    <tspan x="72" dy="25">canvases at flea markets, used a 1920s camera to stage</tspan>
+    <tspan x="72" dy="25">photographs that made the works look like they had been in</tspan>
+    <tspan x="72" dy="25">private collections for decades, and invented fictional collectors</tspan>
+    <tspan x="72" dy="25">to fill the ownership chain.</tspan>
+  </text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="500" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">He was caught because he ran out of his usual zinc white</tspan>
+    <tspan x="72" dy="25">pigment and bought a substitute that contained titanium, a</tspan>
+    <tspan x="72" dy="25">compound not used in white paint until the 1920s. Scientific</tspan>
+    <tspan x="72" dy="25">analysis found the titanium and unraveled the scheme.</tspan>
+  </text>
+
+  <!-- Body text block 4 -->
+  <text x="72" y="630" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">The lesson for investors: documents can be faked as easily as</tspan>
+    <tspan x="72" dy="25">paintings. A receipt, a photograph, a stamp on the back of a</tspan>
+    <tspan x="72" dy="25">canvas. None of these should be taken at face value without</tspan>
+    <tspan x="72" dy="25">independent verification.</tspan>
+  </text>
+
+  <!-- Stat cards row -->
+  <!-- Card 1: $45M -->
+  <rect x="72" y="760" width="210" height="180" rx="0" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="92" y="815" font-family="Inter" font-size="36" font-weight="800" fill="#1a1a1a">$45M</text>
+  <text x="92" y="845" font-family="Inter" font-size="12" font-weight="600" letter-spacing="3px" fill="#888888">FORGED SALES</text>
+  <text x="92" y="873" font-family="DM Sans" font-size="13" fill="#777777">
+    <tspan x="92" dy="0">Beltracchi's 14</tspan>
+    <tspan x="92" dy="20">convicted works</tspan>
+  </text>
+
+  <!-- Card 2: 700,000+ -->
+  <rect x="304" y="760" width="210" height="180" rx="0" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="324" y="815" font-family="Inter" font-size="36" font-weight="800" fill="#1a1a1a">700K+</text>
+  <text x="324" y="845" font-family="Inter" font-size="12" font-weight="600" letter-spacing="3px" fill="#888888">ALR DATABASE</text>
+  <text x="324" y="873" font-family="DM Sans" font-size="13" fill="#777777">
+    <tspan x="324" dy="0">Stolen, missing, and</tspan>
+    <tspan x="324" dy="20">looted items tracked</tspan>
+  </text>
+
+  <!-- Card 3: 400,000+ -->
+  <rect x="536" y="760" width="210" height="180" rx="0" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="556" y="815" font-family="Inter" font-size="36" font-weight="800" fill="#1a1a1a">400K+</text>
+  <text x="556" y="845" font-family="Inter" font-size="12" font-weight="600" letter-spacing="3px" fill="#888888">ANNUAL CHECKS</text>
+  <text x="556" y="873" font-family="DM Sans" font-size="13" fill="#777777">
+    <tspan x="556" dy="0">Art Loss Register</tspan>
+    <tspan x="556" dy="20">searches per year</tspan>
+  </text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">05</text>
+</svg>

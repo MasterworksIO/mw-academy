@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">FREQUENTLY ASKED QUESTIONS (CONT.)</text>
+
+  <!-- FAQ 2 -->
+  <text x="72" y="130" font-family="Inter" font-size="14" font-weight="700" fill="#1a1a1a">How much does provenance affect an artwork's price?</text>
+  <text x="72" y="158" font-family="DM Sans" font-size="13" fill="#444444">
+    <tspan x="72" dy="0">Academic research on nearly three million auction transactions</tspan>
+    <tspan x="72" dy="21">found that exhibition history adds about 42% to hammer prices,</tspan>
+    <tspan x="72" dy="21">published literature adds 54%, pedigree records add 21%, and</tspan>
+    <tspan x="72" dy="21">certificates add 14%.</tspan>
+  </text>
+
+  <!-- FAQ 3 -->
+  <text x="72" y="270" font-family="Inter" font-size="14" font-weight="700" fill="#1a1a1a">Can provenance be faked?</text>
+  <text x="72" y="298" font-family="DM Sans" font-size="13" fill="#444444">
+    <tspan x="72" dy="0">Yes. The most famous modern case involved Wolfgang Beltracchi,</tspan>
+    <tspan x="72" dy="21">who forged more than 300 paintings and fabricated their ownership</tspan>
+    <tspan x="72" dy="21">records using staged photographs, fake receipts, and invented</tspan>
+    <tspan x="72" dy="21">collectors. He was only caught when scientific analysis found a</tspan>
+    <tspan x="72" dy="21">modern pigment in one of his works.</tspan>
+  </text>
+
+  <!-- FAQ 4 -->
+  <text x="72" y="425" font-family="Inter" font-size="14" font-weight="700" fill="#1a1a1a">How do I check if an artwork has been stolen or looted?</text>
+  <text x="72" y="453" font-family="DM Sans" font-size="13" fill="#444444">
+    <tspan x="72" dy="0">The Art Loss Register maintains a database of over 700,000 stolen,</tspan>
+    <tspan x="72" dy="21">missing, and looted items and runs more than 400,000 checks per</tspan>
+    <tspan x="72" dy="21">year. You can request a search through the ALR directly, or ask</tspan>
+    <tspan x="72" dy="21">your dealer to provide proof of clearance.</tspan>
+  </text>
+
+  <!-- FAQ 5 -->
+  <text x="72" y="565" font-family="Inter" font-size="14" font-weight="700" fill="#1a1a1a">Does blockchain solve the provenance problem?</text>
+  <text x="72" y="593" font-family="DM Sans" font-size="13" fill="#444444">
+    <tspan x="72" dy="0">Blockchain creates a tamper-resistant record of ownership</tspan>
+    <tspan x="72" dy="21">transfers, and platforms like Verisart and Artory have registered</tspan>
+    <tspan x="72" dy="21">hundreds of thousands of works. But blockchain only records</tspan>
+    <tspan x="72" dy="21">information entered into it. It cannot verify a painting's</tspan>
+    <tspan x="72" dy="21">ownership in the 1940s was legitimate. It is a useful layer of</tspan>
+    <tspan x="72" dy="21">protection for new transactions, not a fix for historical gaps.</tspan>
+  </text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="730" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Sources label -->
+  <text x="72" y="760" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">SOURCES</text>
+
+  <text x="72" y="790" font-family="DM Sans" font-size="10" fill="#777777">
+    <tspan x="72" dy="0">1. Pownall, R., Graddy, K. "In Art We Trust." Management Science, 2022.</tspan>
+    <tspan x="72" dy="16">2. Li, Y., et al. "Pricing Art and the Art of Pricing." European Financial Management, 2022.</tspan>
+    <tspan x="72" dy="16">3. Center for Art Law. Nazi-Era Looted Art Restitution Cases Project. December 2025.</tspan>
+    <tspan x="72" dy="16">4. Harvard Law School, HALO. "Eighty Years Later." March 2025.</tspan>
+    <tspan x="72" dy="16">5. Art Loss Register. "About Us." 2025.</tspan>
+    <tspan x="72" dy="16">6. MyArtBroker. "Art in the Limelight: Celebrity Provenance at Auction." 2024.</tspan>
+    <tspan x="72" dy="16">7. Artnet News. "Paul Allen's Collection Sells for $1.5 Billion." November 2022.</tspan>
+    <tspan x="72" dy="16">8. Artefact Fine Art. "The Impact of Provenance on Value." 2024.</tspan>
+    <tspan x="72" dy="16">9. Center for Art Law. "Tricking the Art Market: On Forgery, Beltracchi." 2025.</tspan>
+    <tspan x="72" dy="16">10. Sotheby's. "Provenance Research." 2025.</tspan>
+    <tspan x="72" dy="16">11. Citywealth. "Provenance, Policy Wording and Fraud." 2025.</tspan>
+    <tspan x="72" dy="16">12. Deloitte. "Art and Finance Report." 2023.</tspan>
+  </text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="985" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Disclosure -->
+  <text x="72" y="1005" font-family="DM Sans" font-size="9" fill="#999999">
+    <tspan x="72" dy="0">This document is for informational purposes only. See important Reg A disclosures at masterworks.com/cd</tspan>
+  </text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">09</text>
+</svg>

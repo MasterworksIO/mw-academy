@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">02 — THE CELEBRITY EFFECT</text>
+
+  <!-- Body text -->
+  <text x="72" y="140" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">When a famous collector's name is attached to a sale, prices jump.</tspan>
+    <tspan x="72" dy="25">The Paul Allen collection at Christie's in November 2022 brought</tspan>
+    <tspan x="72" dy="25">$1.5 billion across 60 lots, making it the highest-grossing</tspan>
+    <tspan x="72" dy="25">single-owner auction in history. George Seurat's Les Poseuses,</tspan>
+    <tspan x="72" dy="25">Ensemble sold for $149 million. Paul Cezanne's La Montagne</tspan>
+    <tspan x="72" dy="25">Sainte-Victoire hit $137.7 million with fees. Every lot found</tspan>
+    <tspan x="72" dy="25">a buyer.</tspan>
+  </text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="350" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">The Macklowe collection at Sotheby's in 2021 and 2022 totaled</tspan>
+    <tspan x="72" dy="25">$922.2 million, with 80% of the works appearing at auction for</tspan>
+    <tspan x="72" dy="25">the first time. Mark Rothko's No. 7 (1951) sold for $82.5 million.</tspan>
+  </text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="475" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">In March 2024, The Pattie Boyd Collection at Christie's London</tspan>
+    <tspan x="72" dy="25">brought over 2.8 million pounds, more than seven times its high</tspan>
+    <tspan x="72" dy="25">estimate, with every lot sold. Celebrity provenance turns a</tspan>
+    <tspan x="72" dy="25">painting into an artifact of someone's life, and collectors pay</tspan>
+    <tspan x="72" dy="25">for that story.</tspan>
+  </text>
+
+  <!-- Body text block 4 -->
+  <text x="72" y="620" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Single-owner sales now account for almost a third of major</tspan>
+    <tspan x="72" dy="25">auction volume. Auction houses know that a recognizable name</tspan>
+    <tspan x="72" dy="25">on a catalog cover pulls bidders who might otherwise sit out.</tspan>
+  </text>
+
+  <!-- Dark callout block -->
+  <rect x="72" y="740" width="672" height="220" fill="#0f0f0f"/>
+
+  <text x="112" y="800" font-family="Inter" font-size="36" font-weight="800" fill="#ffffff">$1.5B</text>
+
+  <text x="112" y="840" font-family="Inter" font-size="12" font-weight="600" letter-spacing="4px" fill="rgba(255,255,255,0.5)">THE PAUL ALLEN COLLECTION</text>
+
+  <text x="112" y="878" font-family="DM Sans" font-size="13" fill="rgba(255,255,255,0.55)">
+    <tspan x="112" dy="0">60 lots offered, 100% sell-through rate.</tspan>
+    <tspan x="112" dy="22">Christie's, November 2022. The highest-grossing</tspan>
+    <tspan x="112" dy="22">single-owner auction in history.</tspan>
+  </text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">03</text>
+</svg>

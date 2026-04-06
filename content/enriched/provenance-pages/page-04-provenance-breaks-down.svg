@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="90" font-family="Inter" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">03 — WHEN PROVENANCE BREAKS DOWN</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="140" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">A gap in ownership records, especially during the 1930s and</tspan>
+    <tspan x="72" dy="25">1940s, raises immediate questions. Was the work looted? Was it</tspan>
+    <tspan x="72" dy="25">sold under duress? Is there a living heir with a legal claim?</tspan>
+  </text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="260" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">These are not hypothetical risks. Germany established a new</tspan>
+    <tspan x="72" dy="25">arbitration court for Nazi-looted property in October 2024,</tspan>
+    <tspan x="72" dy="25">replacing the old Advisory Commission with a body that can</tspan>
+    <tspan x="72" dy="25">issue binding decisions. France passed a law in February 2024</tspan>
+    <tspan x="72" dy="25">that, for the first time, allows national institutions to return</tspan>
+    <tspan x="72" dy="25">looted works, overriding the long-standing rule against</tspan>
+    <tspan x="72" dy="25">deaccessioning public collections. The U.S. government released</tspan>
+    <tspan x="72" dy="25">guidelines in March 2024 calling on institutions to set up</tspan>
+    <tspan x="72" dy="25">contact points for restitution claims.</tspan>
+  </text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="520" font-family="DM Sans" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Recent cases show the stakes. Heirs of German-Jewish banker</tspan>
+    <tspan x="72" dy="25">Paul von Mendelssohn-Bartholdy sought the return of a Van Gogh</tspan>
+    <tspan x="72" dy="25">Sunflowers painting, arguing it was sold under duress in the</tspan>
+    <tspan x="72" dy="25">1930s. A U.S. appeals court upheld the dismissal in 2025. Heirs</tspan>
+    <tspan x="72" dy="25">of Hungarian collector Baron Mor Lipot Herzog lost their</tspan>
+    <tspan x="72" dy="25">long-running U.S. lawsuit seeking works held in Hungarian</tspan>
+    <tspan x="72" dy="25">state museums. These cases take years and millions in legal</tspan>
+    <tspan x="72" dy="25">fees, and the outcomes are far from certain for either side.</tspan>
+  </text>
+
+  <!-- Quote block -->
+  <rect x="72" y="770" width="2" height="130" fill="#1a1a1a"/>
+  <text x="112" y="800" font-family="Cormorant Garamond" font-size="26" font-style="italic" fill="#1a1a1a">
+    <tspan x="112" dy="0">Even the shadow of a claim can</tspan>
+    <tspan x="112" dy="38">knock 10% to 30% off a work's</tspan>
+    <tspan x="112" dy="38">market value.</tspan>
+  </text>
+  <text x="112" y="920" font-family="Inter" font-size="10" font-weight="600" letter-spacing="4px" fill="#888888">EUROPEAN FINANCIAL MANAGEMENT, 2022</text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter" font-size="9" letter-spacing="3px" fill="#cccccc">04</text>
+</svg>
