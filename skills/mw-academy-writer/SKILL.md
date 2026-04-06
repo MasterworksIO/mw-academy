@@ -36,11 +36,44 @@ These rules are non-negotiable. Every draft must follow them.
 
 1. **Never use em dashes or en dashes.** No `—` or `–` anywhere in the text. Use a comma, a period, or restructure the sentence instead. This applies to every context: asides, lists, attributions, parenthetical thoughts. If you catch yourself reaching for a dash, rewrite.
 
-2. **Never use "it's not X, it's Y" rhetorical constructions.** Don't write "The pattern is not collapse, it is maturation" or "This isn't speculation, it's strategy" or any variant. These feel clever but read as hollow. Just state the thing directly. Say what it *is*, not what it isn't.
+2. **Never use "it's not X, it's Y" rhetorical constructions.** No negative parallelism. Don't write "The pattern is not collapse, it is maturation" or "This isn't speculation, it's strategy" or "Not X. Not Y. Just Z." State what something *is*. Skip the negation setup.
 
-3. **Prefer short, plain, Saxon-rooted words over long Latinate ones.** Choose "buy" over "acquire", "help" over "facilitate", "use" over "utilize", "show" over "demonstrate", "begin" over "commence", "end" over "terminate", "get" over "obtain", "think" over "conceptualize". Every word should be the shortest, most common word that carries the meaning. The reader should never feel like you're reaching for a bigger word than the idea needs.
+3. **Prefer short, plain, Saxon-rooted words over long Latinate ones.** Choose "buy" over "acquire", "help" over "facilitate", "use" over "utilize", "show" over "demonstrate", "begin" over "commence", "end" over "terminate", "get" over "obtain", "think" over "conceptualize". Every word should be the shortest, most common word that carries the meaning.
 
-4. **Only cite sources from the last 12 months.** Never reference data, reports, or articles published more than 12 months before the current date. If the best available data is older than 12 months, flag it with `[NEEDS UPDATED DATA]` and note the most recent figure you found alongside its date. The reader expects current information, and stale data undermines credibility. When in doubt, prefer the most recently published source available.
+4. **Only cite sources from the last 12 months.** Never reference data, reports, or articles published more than 12 months before the current date. If the best available data is older than 12 months, flag it with `[NEEDS UPDATED DATA]` and note the most recent figure you found alongside its date. When in doubt, prefer the most recently published source available.
+
+### AI Writing Tropes to Avoid
+
+These patterns make writing sound machine-generated. Read this list before every draft and check your work against it after.
+
+**Banned words and phrases.** Do not use any of these: "delve", "leverage" (as a verb), "robust", "unprecedented", "dynamic", "comprehensive", "essential", "pivotal", "revolutionize", "tapestry", "landscape" (when describing a field or domain), "paradigm", "synergy", "ecosystem", "framework", "serves as", "stands as", "represents", "marks" (when a simple "is" would work), "a testament to", "it's worth noting", "importantly", "interestingly", "notably", "let's break this down", "let's unpack", "let's explore", "here's the kicker", "here's the thing", "here's the deal", "here's where it gets interesting", "think of it as", "imagine a world where", "in conclusion", "to sum up", "in summary", "despite these challenges".
+
+**Banned sentence structures.**
+
+- Self-posed rhetorical questions answered in the next sentence. ("The result? Devastating." / "The worst part? Nobody saw it coming.") If you have a point, make it. Don't set it up as a riddle.
+- Anaphora abuse: repeating the same sentence opening three or more times in a row. ("They could expose... They could offer... They could provide...")
+- Tricolon stacking: back-to-back rule-of-three lists. One tricolon per section, maximum. More than that sounds like a speech, not writing.
+- Short punchy fragments used as standalone paragraphs for fake drama. ("Platforms do." / "And then it happened.") Write full sentences.
+- "From X to Y" false ranges where X and Y are not on any real scale. ("From innovation to cultural transformation" has no meaningful middle ground.)
+- The pedagogical countdown: "The first... The second... The third..." dressed up as prose. If it is a list, format it as one. If it is prose, connect the ideas.
+
+**Banned tone patterns.**
+
+- Grandiose stakes inflation. A piece about auction house fees is about auction house fees. It is not about "the future of how we think about value."
+- False vulnerability or performed self-awareness. ("And yes, I'm being honest here...")
+- Vague attributions. Never cite "experts say" or "industry reports suggest" without naming the expert or the report. If you cannot name the source, you do not have one.
+- The "despite its challenges" formula. Do not acknowledge problems only to wave them away with optimism. If a risk is real, say so and leave it standing.
+- Invented concept labels. Do not coin compound phrases like "the supervision paradox" or "the acceleration trap" as if they are established terms. If a concept needs a name, it should already have one.
+
+**Banned formatting habits.**
+
+- Bold-first bullets. Not every list item needs to start with a bolded keyword. Vary the format. Sometimes a plain sentence is better.
+- Uniform paragraph length. Mix short and long paragraphs. Humans do not write in blocks of equal size.
+- Unicode arrows (→) or smart quotes. Use plain text characters.
+- Fractal summaries. Do not preview what you are about to say, say it, then summarize what you just said. Say it once.
+- The signposted conclusion. Do not write "In conclusion" or "To sum up." The reader can feel when a piece is ending.
+
+**General principle.** Read your draft as if you are a skeptical editor looking for signs that a machine wrote it. If any sentence could appear in a thousand other AI-generated articles without anyone noticing, rewrite it. The goal is writing that sounds like a specific, opinionated person who happens to know a lot about art markets, not like a language model that was asked to write about art markets.
 
 ## Input
 
