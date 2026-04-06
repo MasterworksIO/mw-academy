@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
-<rect width="1080" height="1080" fill="#131217" rx="0"/>
-<rect x="0" y="0" width="1080" height="6" fill="#3838E6"/>
-<text x="100" y="160" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">The Buyer's Premium</text>
-<text x="100" y="304" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800">$270K</text>
-<text x="100" y="360" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30">in fees on a $1M lot at Christie's or Sotheby's</text>
-</svg>

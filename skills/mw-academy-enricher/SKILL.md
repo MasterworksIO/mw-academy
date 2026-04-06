@@ -23,7 +23,7 @@ Every visual output uses this palette. No exceptions.
 | Background | `#131217` | Chart backgrounds, card backgrounds |
 | Night | `#0A0A0D` | Darker variant for contrast, borders |
 | Dusk Purple | `#13134A` | Secondary fills, area chart underlays |
-| Frequency Purple | `#3838E6` | Primary data line, primary bar color, accents |
+| Frequency Purple | `#495DE5` | Primary data line, primary bar color, accents |
 | Medium Green | `#24CB71` | Secondary data line, positive indicators, comparison series |
 | White | `#FFFFFF` | Titles, primary labels |
 | Frost | `#E8E8E8` | Body text, axis labels, secondary labels |
@@ -122,7 +122,7 @@ The goal is clean, readable charts that look like they belong in a Bloomberg ter
 - Grid lines: thin, `#13134A` (Dusk Purple), subtle
 - Axis labels: `#E8E8E8` (Frost), 12px Neue Haas Grotesk
 - Chart title: `#FFFFFF` (White), 18px Tiempos Headline, top-left aligned
-- Data lines: 2.5px stroke, `#3838E6` (Frequency Purple) for primary, `#24CB71` (Medium Green) for secondary
+- Data lines: 2.5px stroke, `#495DE5` (Frequency Purple) for primary, `#24CB71` (Medium Green) for secondary
 - Bar fills: same colors as lines, with 80% opacity
 - Source attribution: small text at bottom-left, `#E8E8E8`, 10px
 

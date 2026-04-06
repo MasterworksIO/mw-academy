@@ -45,7 +45,7 @@ DARK_TEXT_SECONDARY = "#E8E8E8"
 DARK_TEXT_MUTED = "#888899"
 
 # Data colors
-FREQ_PURPLE = "#3838E6"
+FREQ_PURPLE = "#495DE5"
 PURPLE_LIGHT = "#6B6BF0"  # lighter variant for area fills
 GRAY_PRIMARY = "#9CA3AF"  # secondary data series
 GRAY_DARK = "#6B7280"     # darker gray for emphasis
