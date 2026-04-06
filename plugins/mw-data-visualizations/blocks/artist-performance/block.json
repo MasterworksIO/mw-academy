@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "mw/artist-performance",
+    "version": "1.0.0",
+    "title": "Artist Performance",
+    "category": "mw-data-visualizations",
+    "icon": "chart-area",
+    "description": "Interactive artist price trajectory, auction volume, and return comparison visualizations.",
+    "keywords": [ "artist", "performance", "auction", "price", "trajectory", "visualization" ],
+    "textdomain": "mw-data-visualizations",
+    "supports": {
+        "html": false,
+        "align": [ "wide", "full" ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "attributes": {
+        "artistId": {
+            "type": "number",
+            "default": 0
+        },
+        "artistName": {
+            "type": "string",
+            "default": ""
+        },
+        "metric": {
+            "type": "string",
+            "default": "price-trajectory",
+            "enum": [ "price-trajectory", "auction-volume", "return-comparison" ]
+        },
+        "period": {
+            "type": "string",
+            "default": "5y",
+            "enum": [ "5y", "10y", "all" ]
+        },
+        "showComparisons": {
+            "type": "boolean",
+            "default": false
+        },
+        "comparisonArtists": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "number"
+            }
+        }
+    },
+    "editorScript": "file:./edit.js",
+    "style": "file:../../assets/css/blocks.css"
+}

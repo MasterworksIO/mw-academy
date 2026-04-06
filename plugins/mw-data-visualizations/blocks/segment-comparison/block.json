@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "mw/segment-comparison",
+    "version": "1.0.0",
+    "title": "Segment Comparison",
+    "category": "mw-data-visualizations",
+    "icon": "chart-bar",
+    "description": "Compare art market segments and financial benchmarks across key metrics using bar, radar, or scatter charts.",
+    "keywords": [ "segment", "comparison", "benchmark", "radar", "scatter", "visualization" ],
+    "textdomain": "mw-data-visualizations",
+    "supports": {
+        "html": false,
+        "align": [ "wide", "full" ],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "attributes": {
+        "segments": {
+            "type": "array",
+            "default": [ "contemporary", "impressionist", "post-war" ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "benchmarks": {
+            "type": "array",
+            "default": [ "sp500" ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "metric": {
+            "type": "string",
+            "default": "total-return",
+            "enum": [ "total-return", "volatility", "sharpe-ratio" ]
+        },
+        "period": {
+            "type": "string",
+            "default": "5y",
+            "enum": [ "1y", "3y", "5y", "10y", "all" ]
+        },
+        "chartType": {
+            "type": "string",
+            "default": "bar",
+            "enum": [ "bar", "radar", "scatter" ]
+        }
+    },
+    "editorScript": "file:./edit.js",
+    "style": "file:../../assets/css/blocks.css"
+}

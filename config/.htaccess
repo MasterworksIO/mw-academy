@@ -1,0 +1,236 @@
+# =============================================================================
+# Masterworks Academy - WordPress .htaccess
+#
+# This file goes at the WordPress document root on the Lightsail instance.
+# WordPress core rewrite rules are adjusted for the /academy/ subfolder.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. WordPress Rewrite Rules (subfolder install)
+# -----------------------------------------------------------------------------
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /academy/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /academy/index.php [L]
+</IfModule>
+# END WordPress
+
+# -----------------------------------------------------------------------------
+# 2. Security - Block access to sensitive files
+# -----------------------------------------------------------------------------
+
+# Block wp-config.php
+<Files wp-config.php>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</Files>
+
+# Block .htaccess
+<Files .htaccess>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</Files>
+
+# Block readme, license, and sample config (information disclosure)
+<FilesMatch "^(readme\.html|license\.txt|wp-config-sample\.php)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block xmlrpc.php (brute-force and DDoS vector)
+<Files xmlrpc.php>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</Files>
+
+# Block PHP execution in wp-content/uploads (prevents uploaded shell execution)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^wp-content/uploads/.*\.php$ - [F,L]
+</IfModule>
+
+# Block PHP execution in wp-includes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^wp-includes/.*\.php$ - [F,L]
+    RewriteRule ^wp-includes/ms-files\.php$ - [L]
+</IfModule>
+
+# Block hidden files and directories (.git, .env, etc.)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule (^|/)\.(?!well-known/) - [F,L]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 3. Security - Block common exploit attempts
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block script injection via query strings
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+    RewriteRule .* - [F,L]
+
+    # Block wp-config.php access via query string tricks
+    RewriteCond %{REQUEST_URI} wp-config\.php [NC]
+    RewriteRule .* - [F,L]
+
+    # Block author enumeration (?author=N)
+    RewriteCond %{QUERY_STRING} author=\d+ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 4. Security Headers
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options        "SAMEORIGIN"
+    Header always set X-XSS-Protection       "1; mode=block"
+    Header always set Referrer-Policy         "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy      "camera=(), microphone=(), geolocation=()"
+
+    # Strip server version information
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+ServerSignature Off
+
+# -----------------------------------------------------------------------------
+# 5. Caching Headers for Static Assets
+# -----------------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault                       "access plus 1 hour"
+
+    # Images
+    ExpiresByType image/jpeg             "access plus 30 days"
+    ExpiresByType image/png              "access plus 30 days"
+    ExpiresByType image/gif              "access plus 30 days"
+    ExpiresByType image/webp             "access plus 30 days"
+    ExpiresByType image/svg+xml          "access plus 30 days"
+    ExpiresByType image/x-icon           "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff              "access plus 1 year"
+    ExpiresByType font/woff2             "access plus 1 year"
+    ExpiresByType application/font-woff  "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # CSS and JavaScript (use cache-busting query strings in themes)
+    ExpiresByType text/css               "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+
+    # HTML (WordPress generates dynamic HTML)
+    ExpiresByType text/html              "access plus 0 seconds"
+
+    # Data
+    ExpiresByType application/json       "access plus 0 seconds"
+    ExpiresByType application/xml        "access plus 0 seconds"
+
+    # Documents
+    ExpiresByType application/pdf        "access plus 30 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Static assets: immutable long cache
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot|otf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Dynamic pages: no cache
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 6. Gzip Compression
+# -----------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/truetype
+    AddOutputFilterByType DEFLATE image/svg+xml
+
+    # Skip already-compressed formats
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|zip|gz|bz2|rar|mp4|mp3|avi)$ no-gzip dont-vary
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 7. PHP Settings (if mod_php is available)
+# -----------------------------------------------------------------------------
+<IfModule mod_php.c>
+    php_value upload_max_filesize 64M
+    php_value post_max_size       64M
+    php_value max_execution_time  300
+    php_value max_input_time      300
+    php_value memory_limit        256M
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 8. Disable Directory Browsing
+# -----------------------------------------------------------------------------
+Options -Indexes
+
+# -----------------------------------------------------------------------------
+# 9. Protect wp-includes
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /academy/
+    RewriteRule ^wp-admin/includes/ - [F,L]
+    RewriteRule !^wp-includes/ - [S=3]
+    RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+    RewriteRule ^wp-includes/js/tinymce/langs/.+\.php$ - [F,L]
+    RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 10. ETags - Disable (rely on Cache-Control/Expires)
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None

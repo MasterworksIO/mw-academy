@@ -1,0 +1,408 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Masterworks Academy - WordPress on AWS Lightsail with CloudFront reverse proxy.
+  Provisions a Lightsail instance (WordPress), static IP, managed MySQL database,
+  and a CloudFront distribution that routes /academy/* to the WordPress origin
+  while sending all other traffic to the existing React application.
+
+# =============================================================================
+# Parameters
+# =============================================================================
+Parameters:
+  ReactAppOriginDomain:
+    Type: String
+    Description: >
+      Domain name of the existing React app origin (e.g., react-app.example.com
+      or an S3 bucket website endpoint). This becomes the default CloudFront origin.
+    AllowedPattern: ^[a-zA-Z0-9][a-zA-Z0-9\-\.]+[a-zA-Z0-9]$
+    ConstraintDescription: Must be a valid domain name.
+
+  AcmCertificateArn:
+    Type: String
+    Description: >
+      ARN of an ACM certificate for masterworks.com (must be in us-east-1 for
+      CloudFront). Example: arn:aws:acm:us-east-1:123456789012:certificate/abc-123
+    AllowedPattern: ^arn:aws:acm:us-east-1:\d{12}:certificate\/[\w\-]+$
+    ConstraintDescription: Must be a valid ACM certificate ARN in us-east-1.
+
+  InstanceBlueprintId:
+    Type: String
+    Default: wordpress
+    Description: Lightsail blueprint ID. Use 'wordpress' for the managed WordPress image.
+
+  InstanceBundleId:
+    Type: String
+    Default: medium_3_0
+    Description: >
+      Lightsail bundle (instance plan). medium_3_0 = 4 GB RAM, 2 vCPUs, 80 GB SSD,
+      4 TB transfer (~$20/month).
+
+  DatabaseBundleId:
+    Type: String
+    Default: medium_2_0
+    Description: >
+      Lightsail managed database plan. medium_2_0 = Standard tier with 4 GB RAM,
+      2 vCPUs, 80 GB SSD (~$30/month).
+
+  DatabaseMasterUsername:
+    Type: String
+    Default: dbmasteruser
+    Description: Master username for the Lightsail managed MySQL database.
+    MinLength: 1
+    MaxLength: 16
+    AllowedPattern: ^[a-zA-Z][a-zA-Z0-9]*$
+
+  DatabaseMasterPassword:
+    Type: String
+    NoEcho: true
+    Description: Master password for the Lightsail managed MySQL database.
+    MinLength: 8
+    MaxLength: 41
+
+  EnvironmentTag:
+    Type: String
+    Default: production
+    AllowedValues:
+      - production
+      - staging
+    Description: Environment tag for resource naming and configuration.
+
+# =============================================================================
+# Resources
+# =============================================================================
+Resources:
+
+  # ---------------------------------------------------------------------------
+  # Lightsail Instance - WordPress
+  # ---------------------------------------------------------------------------
+  AcademyInstance:
+    Type: AWS::Lightsail::Instance
+    Properties:
+      InstanceName: !Sub 'mw-academy-${EnvironmentTag}'
+      AvailabilityZone: us-east-1a
+      BlueprintId: !Ref InstanceBlueprintId
+      BundleId: !Ref InstanceBundleId
+      Tags:
+        - Key: Project
+          Value: masterworks-academy
+        - Key: Environment
+          Value: !Ref EnvironmentTag
+      # User data runs on first boot to do initial configuration.
+      # The full setup is handled by setup-lightsail.sh after instance is ready.
+      UserData: !Base64
+        Fn::Sub: |
+          #!/bin/bash
+          # Tag the instance for identification
+          echo "masterworks-academy-${EnvironmentTag}" > /etc/instance-tag
+          # Signal that the instance is ready for setup-lightsail.sh
+          touch /tmp/lightsail-init-complete
+
+  # ---------------------------------------------------------------------------
+  # Lightsail Static IP - Attached to WordPress instance
+  # ---------------------------------------------------------------------------
+  AcademyStaticIp:
+    Type: AWS::Lightsail::StaticIp
+    Properties:
+      StaticIpName: !Sub 'mw-academy-ip-${EnvironmentTag}'
+      AttachedTo: !Ref AcademyInstance
+
+  # ---------------------------------------------------------------------------
+  # Lightsail Managed MySQL Database
+  # ---------------------------------------------------------------------------
+  AcademyDatabase:
+    Type: AWS::Lightsail::Database
+    Properties:
+      RelationalDatabaseName: !Sub 'mw-academy-db-${EnvironmentTag}'
+      RelationalDatabaseBlueprintId: mysql_8_0
+      RelationalDatabaseBundleId: !Ref DatabaseBundleId
+      MasterDatabaseName: academy_wp
+      MasterUsername: !Ref DatabaseMasterUsername
+      MasterUserPassword: !Ref DatabaseMasterPassword
+      AvailabilityZone: us-east-1a
+      # Enable automatic backups with 7-day retention
+      BackupRetention: true
+      PreferredBackupWindow: '03:00-04:00'
+      PreferredMaintenanceWindow: 'Sun:05:00-Sun:06:00'
+      PubliclyAccessible: false
+      Tags:
+        - Key: Project
+          Value: masterworks-academy
+        - Key: Environment
+          Value: !Ref EnvironmentTag
+
+  # ---------------------------------------------------------------------------
+  # CloudFront Distribution - Dual-origin (React + WordPress)
+  # ---------------------------------------------------------------------------
+  AcademyDistribution:
+    Type: AWS::CloudFront::Distribution
+    DependsOn:
+      - AcademyStaticIp
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: !Sub 'Masterworks Academy + React App (${EnvironmentTag})'
+        Aliases:
+          - masterworks.com
+        ViewerCertificate:
+          AcmCertificateArn: !Ref AcmCertificateArn
+          SslSupportMethod: sni-only
+          MinimumProtocolVersion: TLSv1.2_2021
+        HttpVersion: http2and3
+        PriceClass: PriceClass_100
+        IPV6Enabled: true
+
+        # --- Origins ---
+        Origins:
+          # Origin 1: Existing React application (default)
+          - Id: ReactAppOrigin
+            DomainName: !Ref ReactAppOriginDomain
+            CustomOriginConfig:
+              HTTPPort: 80
+              HTTPSPort: 443
+              OriginProtocolPolicy: https-only
+              OriginSSLProtocols:
+                - TLSv1.2
+              OriginReadTimeout: 30
+              OriginKeepaliveTimeout: 5
+            OriginCustomHeaders:
+              - HeaderName: X-Origin-Verify
+                HeaderValue: masterworks-cdn-origin-2024
+
+          # Origin 2: WordPress on Lightsail
+          - Id: AcademyWordPressOrigin
+            DomainName: !GetAtt AcademyStaticIp.IpAddress
+            CustomOriginConfig:
+              HTTPPort: 80
+              HTTPSPort: 443
+              # Lightsail WordPress uses HTTP internally; SSL terminates at CloudFront
+              OriginProtocolPolicy: http-only
+              OriginReadTimeout: 60
+              OriginKeepaliveTimeout: 30
+            OriginCustomHeaders:
+              # Pass the public hostname so WordPress generates correct URLs
+              - HeaderName: X-Forwarded-Host
+                HeaderValue: masterworks.com
+              - HeaderName: X-Origin-Verify
+                HeaderValue: masterworks-cdn-origin-2024
+
+        # --- Default Cache Behavior: React App ---
+        DefaultCacheBehavior:
+          TargetOriginId: ReactAppOrigin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          CachedMethods:
+            - GET
+            - HEAD
+          Compress: true
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6  # CachingOptimized
+          OriginRequestPolicyId: 88a5eaf4-2fd4-4709-b370-b4c650ea3fcf  # CORS-S3Origin
+          ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03  # SecurityHeadersPolicy
+
+        # --- Cache Behaviors ---
+        CacheBehaviors:
+          # Behavior 1: WordPress Admin - NO caching, all methods allowed
+          - PathPattern: '/academy/wp-admin/*'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+              - PUT
+              - PATCH
+              - POST
+              - DELETE
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            # Use CachingDisabled policy to bypass cache entirely
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad  # CachingDisabled
+            OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3  # AllViewer
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+          # Behavior 2: WordPress login page - NO caching
+          - PathPattern: '/academy/wp-login.php'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+              - PUT
+              - PATCH
+              - POST
+              - DELETE
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad  # CachingDisabled
+            OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3  # AllViewer
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+          # Behavior 3: WordPress REST API - minimal caching
+          - PathPattern: '/academy/wp-json/*'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+              - PUT
+              - PATCH
+              - POST
+              - DELETE
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad  # CachingDisabled
+            OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3  # AllViewer
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+          # Behavior 4: WordPress AJAX handler - NO caching
+          - PathPattern: '/academy/wp-admin/admin-ajax.php'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+              - PUT
+              - PATCH
+              - POST
+              - DELETE
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad
+            OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+          # Behavior 5: WordPress static uploads - aggressive caching
+          - PathPattern: '/academy/wp-content/uploads/*'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6  # CachingOptimized
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+          # Behavior 6: WordPress theme/plugin static assets - aggressive caching
+          - PathPattern: '/academy/wp-content/themes/*'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6  # CachingOptimized
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+          # Behavior 7: WordPress includes (core JS/CSS) - aggressive caching
+          - PathPattern: '/academy/wp-includes/*'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+          # Behavior 8: All other /academy/* requests - standard caching
+          - PathPattern: '/academy/*'
+            TargetOriginId: AcademyWordPressOrigin
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+              - PUT
+              - PATCH
+              - POST
+              - DELETE
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: true
+            # Use CachingDisabled for dynamic WordPress pages; caching should be
+            # handled at the WordPress level (WP Rocket / page cache) and returned
+            # via Cache-Control headers that CloudFront will respect.
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad
+            OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3
+            ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03
+
+        # --- Custom Error Responses ---
+        CustomErrorResponses:
+          - ErrorCode: 502
+            ErrorCachingMinTTL: 10
+          - ErrorCode: 503
+            ErrorCachingMinTTL: 10
+          - ErrorCode: 504
+            ErrorCachingMinTTL: 10
+
+      Tags:
+        - Key: Project
+          Value: masterworks-academy
+        - Key: Environment
+          Value: !Ref EnvironmentTag
+
+# =============================================================================
+# Outputs
+# =============================================================================
+Outputs:
+  LightsailInstanceName:
+    Description: Name of the Lightsail WordPress instance
+    Value: !Ref AcademyInstance
+
+  LightsailStaticIp:
+    Description: Static IP address of the Lightsail WordPress instance
+    Value: !GetAtt AcademyStaticIp.IpAddress
+    Export:
+      Name: !Sub '${AWS::StackName}-LightsailIP'
+
+  CloudFrontDomainName:
+    Description: CloudFront distribution domain name
+    Value: !GetAtt AcademyDistribution.DomainName
+    Export:
+      Name: !Sub '${AWS::StackName}-CloudFrontDomain'
+
+  CloudFrontDistributionId:
+    Description: CloudFront distribution ID (for cache invalidation)
+    Value: !Ref AcademyDistribution
+
+  WordPressAdminUrl:
+    Description: WordPress admin dashboard URL
+    Value: !Sub 'https://masterworks.com/academy/wp-admin/'
+
+  WordPressSiteUrl:
+    Description: WordPress site URL
+    Value: 'https://masterworks.com/academy'
+
+  DatabaseEndpoint:
+    Description: Lightsail managed database endpoint
+    Value: !GetAtt AcademyDatabase.DatabaseArn
+
+  DatabaseName:
+    Description: WordPress database name
+    Value: academy_wp

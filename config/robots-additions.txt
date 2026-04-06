@@ -1,0 +1,49 @@
+# =============================================================================
+# Masterworks Academy - robots.txt Additions
+#
+# Merge these lines into the EXISTING robots.txt at the site root
+# (https://masterworks.com/robots.txt).
+#
+# The academy lives at /academy/ on the main domain, so these directives
+# go into the single site-wide robots.txt -- WordPress does NOT generate
+# its own robots.txt at /academy/robots.txt.
+# =============================================================================
+
+# Add the following directives inside the existing User-agent: * block:
+
+# Allow all public Academy pages
+Allow: /academy/
+
+# Block the WordPress admin area (nothing for crawlers here)
+Disallow: /academy/wp-admin/
+
+# Exception: allow admin-ajax.php (used by front-end AJAX functionality)
+Allow: /academy/wp-admin/admin-ajax.php
+
+# Block login page
+Disallow: /academy/wp-login.php
+
+# Block internal search results (thin/duplicate content)
+Disallow: /academy/?s=
+Disallow: /academy/search/
+
+# Block author archives (prevents user enumeration)
+Disallow: /academy/author/
+
+# Block feed URLs (avoids content duplication in index)
+Disallow: /academy/feed/
+Disallow: /academy/comments/feed/
+
+# Block trackback URLs
+Disallow: /academy/trackback/
+
+# Block wp-includes (no user-facing content)
+Disallow: /academy/wp-includes/
+
+# =============================================================================
+# Sitemap - Add at the end of the file (outside any User-agent block)
+# =============================================================================
+# Yoast SEO generates this automatically once the plugin is activated.
+# Verify the URL matches your Yoast settings.
+
+Sitemap: https://masterworks.com/academy/sitemap_index.xml
