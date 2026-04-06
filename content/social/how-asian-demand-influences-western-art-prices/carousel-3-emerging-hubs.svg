@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <rect width="1080" height="1080" fill="#131217"/>
+  <rect x="80" y="80" width="120" height="4" fill="#3838E6" rx="2"/>
+  <text x="80" y="180" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, serif" font-size="42" font-weight="600">
+    <tspan x="80" dy="0">Singapore and Japan Are</tspan>
+    <tspan x="80" dy="52">Rising Fast</tspan>
+  </text>
+  <text x="80" y="404" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="72" font-weight="700">+74%</text>
+  <text x="80" y="449" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="20">surge in Singapores art imports in 2024, now the 5th largest global importer</text>
+  <text x="80" y="1020" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="14" opacity="0.6">Masterworks Academy</text>
+  <rect x="80" y="1035" width="80" height="3" fill="#3838E6" rx="1.5"/>
+</svg>

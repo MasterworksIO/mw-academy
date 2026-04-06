@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <rect width="1200" height="700" fill="#131217"/>
+  <text x="80" y="40" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, serif" font-size="20" font-weight="600">Record Asian-Driven Sales of Western Artists at Auction</text>
+  <text x="80" y="685" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="10" opacity="0.7">Source: Sotheby's, Christie's, ARTnews</text>
+  <text x="170" y="155.7" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end">Basquiat (2017)</text>
+  <rect x="180" y="134.2" width="872.7" height="35.0" fill="#3838E6" opacity="0.85" rx="3"/>
+  <text x="1060.7" y="155.7" fill="#FFFFFF" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">110.5</text>
+  <text x="170" y="254.8" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end">Monet (2016)</text>
+  <rect x="180" y="233.3" width="642.9" height="35.0" fill="#24CB71" opacity="0.85" rx="3"/>
+  <text x="830.9" y="254.8" fill="#FFFFFF" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">81.4</text>
+  <text x="170" y="354.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end">Picasso, HK (2025)</text>
+  <rect x="180" y="332.5" width="169.8" height="35.0" fill="#3838E6" opacity="0.85" rx="3"/>
+  <text x="357.8" y="354.0" fill="#FFFFFF" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">21.5</text>
+  <text x="170" y="453.2" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end">Mitchell, HK (2026)</text>
+  <rect x="180" y="431.7" width="139.0" height="35.0" fill="#24CB71" opacity="0.85" rx="3"/>
+  <text x="327.0" y="453.2" fill="#FFFFFF" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">17.6</text>
+  <text x="170" y="552.3" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end">Richter, HK (2026)</text>
+  <rect x="180" y="530.8" width="120.0" height="35.0" fill="#3838E6" opacity="0.85" rx="3"/>
+  <text x="308.0" y="552.3" fill="#FFFFFF" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">15.2</text>
+</svg>
