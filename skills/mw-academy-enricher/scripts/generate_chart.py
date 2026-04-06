@@ -424,10 +424,6 @@ def generate_social_card(title, data, w=1080, h=1080):
     o.append(f'<text x="80" y="{stat_y}" fill="{FREQ_PURPLE}" font-family="{FONT_BODY}" font-size="80" font-weight="800">{escape_xml(stat_value)}</text>')
     o.append(f'<text x="80" y="{stat_y + 50}" fill="{DARK_TEXT_SECONDARY}" font-family="{FONT_BODY}" font-size="20">{escape_xml(stat_label)}</text>')
 
-    # Bottom bar
-    o.append(f'<rect x="0" y="{h - 80}" width="{w}" height="80" fill="{DARK_CARD}"/>')
-    o.append(f'<text x="80" y="{h - 35}" fill="{DARK_TEXT_MUTED}" font-family="{FONT_BODY}" font-size="16" letter-spacing="2">MASTERWORKS ACADEMY</text>')
-
     o.append("</svg>")
     return "\n".join(o)
 
