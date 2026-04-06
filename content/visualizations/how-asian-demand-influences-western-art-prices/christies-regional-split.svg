@@ -1,36 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
-  <rect width="1200" height="700" fill="#131217"/>
-  <text x="80" y="40" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, serif" font-size="20" font-weight="600">Christie's Global Sales by Region (2024 vs 2025)</text>
-  <text x="80" y="685" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="10" opacity="0.7">Source: Christie's annual reports, The Value</text>
-  <line x1="80" y1="630.0" x2="1140" y2="630.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="634.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">0</text>
-  <line x1="80" y1="518.0" x2="1140" y2="518.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="522.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">10</text>
-  <line x1="80" y1="406.0" x2="1140" y2="406.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="410.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">20</text>
-  <line x1="80" y1="294.0" x2="1140" y2="294.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="298.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">30</text>
-  <line x1="80" y1="182.0" x2="1140" y2="182.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="186.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">40</text>
-  <line x1="80" y1="70.0" x2="1140" y2="70.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="74.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">50</text>
-  <text x="256.7" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">Americas</text>
-  <rect x="133.0" y="159.6" width="111.3" height="470.4" fill="#3838E6" opacity="0.85" rx="2"/>
-  <text x="188.6" y="153.6" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">42</text>
-  <rect x="256.7" y="170.8" width="111.3" height="459.2" fill="#24CB71" opacity="0.85" rx="2"/>
-  <text x="312.3" y="164.8" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">41</text>
-  <text x="610.0" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">EMEA</text>
-  <rect x="486.3" y="271.6" width="111.3" height="358.4" fill="#3838E6" opacity="0.85" rx="2"/>
-  <text x="542.0" y="265.6" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">32</text>
-  <rect x="610.0" y="226.8" width="111.3" height="403.2" fill="#24CB71" opacity="0.85" rx="2"/>
-  <text x="665.6" y="220.8" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">36</text>
-  <text x="963.3" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">Asia-Pacific</text>
-  <rect x="839.7" y="338.8" width="111.3" height="291.2" fill="#3838E6" opacity="0.85" rx="2"/>
-  <text x="895.3" y="332.8" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">26</text>
-  <rect x="963.3" y="372.4" width="111.3" height="257.6" fill="#24CB71" opacity="0.85" rx="2"/>
-  <text x="1019.0" y="366.4" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">23</text>
-  <rect x="1040" y="62" width="12" height="12" fill="#3838E6" rx="2"/>
-  <text x="1058" y="72" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12">2024</text>
-  <rect x="1040" y="84" width="12" height="12" fill="#24CB71" rx="2"/>
-  <text x="1058" y="94" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12">2025</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="65" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Christie's Global Sales by Region</text>
+<text x="65" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Share of auction turnover (%), 2024 vs 2025</text>
+<line x1="65" y1="610.0" x2="1150" y2="610.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="614.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">0</text>
+<line x1="65" y1="506.0" x2="1150" y2="506.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="510.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">10</text>
+<line x1="65" y1="402.0" x2="1150" y2="402.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="406.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">20</text>
+<line x1="65" y1="298.0" x2="1150" y2="298.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="302.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">30</text>
+<line x1="65" y1="194.0" x2="1150" y2="194.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="198.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">40</text>
+<line x1="65" y1="90.0" x2="1150" y2="90.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="94.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">50</text>
+<text x="245.8" y="638" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">Americas</text>
+<rect x="137.3" y="173.2" width="95.5" height="436.8" fill="#3838E6" rx="3"/>
+<text x="185.1" y="165.2" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">42</text>
+<rect x="245.8" y="183.6" width="95.5" height="426.4" fill="#9CA3AF" rx="3"/>
+<text x="293.6" y="175.6" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">41</text>
+<text x="607.5" y="638" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">EMEA</text>
+<rect x="499.0" y="277.2" width="95.5" height="332.8" fill="#3838E6" rx="3"/>
+<text x="546.7" y="269.2" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">32</text>
+<rect x="607.5" y="235.6" width="95.5" height="374.4" fill="#9CA3AF" rx="3"/>
+<text x="655.2" y="227.6" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">36</text>
+<text x="969.2" y="638" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">Asia-Pacific</text>
+<rect x="860.7" y="339.6" width="95.5" height="270.4" fill="#3838E6" rx="3"/>
+<text x="908.4" y="331.6" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">26</text>
+<rect x="969.2" y="370.8" width="95.5" height="239.2" fill="#9CA3AF" rx="3"/>
+<text x="1016.9" y="362.8" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">23</text>
+<rect x="1060" y="39" width="14" height="14" fill="#3838E6" rx="3"/>
+<text x="1080" y="50" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">2024</text>
+<rect x="1060" y="61" width="14" height="14" fill="#9CA3AF" rx="3"/>
+<text x="1080" y="72" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">2025</text>
+<text x="65" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Christie's annual reports, The Value</text>
 </svg>

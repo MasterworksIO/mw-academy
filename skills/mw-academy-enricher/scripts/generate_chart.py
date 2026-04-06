@@ -1,357 +1,470 @@
 #!/usr/bin/env python3
 """
-Masterworks Academy SVG Chart Generator
+Masterworks Academy SVG Chart Generator v2
 
-Produces Figma-ready SVG charts using the Masterworks brand palette.
-No external dependencies — uses only Python stdlib.
+Produces polished, Figma-ready SVG charts matching the Masterworks visual style:
+- Article charts: light background (#F7F7F8), clean typography, subtle grids
+- Social cards: dark background (#131217), bold stats, brand accents
+
+Style references: Banksy vs Basquiat comparison panels, Banksy Demand Over Time chart,
+Masterworks Art Market Indices chart, comparison tables.
+
+No external dependencies. Python stdlib only.
 
 Usage:
-    python3 generate_chart.py --type line --title "Chart Title" --data '{"series":[...]}' --output out.svg
-    python3 generate_chart.py --type bar --title "Chart Title" --data '{"categories":[...]}' --output out.svg
-    python3 generate_chart.py --type horizontal-bar --title "..." --data '{"items":[...]}' --output out.svg
-
-Data formats:
-    line:  {"series": [{"name": "S1", "values": [{"year": 2020, "value": 100}, ...]}, ...]}
-    bar:   {"categories": ["Cat1", "Cat2"], "series": [{"name": "S1", "values": [10, 20]}, ...]}
-    horizontal-bar: {"items": [{"label": "Item1", "value": 85}, {"label": "Item2", "value": 60}, ...]}
+    python3 generate_chart.py --type line --title "Title" --data '{...}' --output out.svg
+    python3 generate_chart.py --type line --title "Title" --data '{...}' --output out.svg --theme dark
+    python3 generate_chart.py --type bar --title "Title" --data '{...}' --output out.svg
+    python3 generate_chart.py --type horizontal-bar --title "Title" --data '{...}' --output out.svg
+    python3 generate_chart.py --type comparison-table --title "Title" --data '{...}' --output out.svg
+    python3 generate_chart.py --type social-card --title "Title" --data '{...}' --output out.svg
 """
 
 import argparse
 import json
 import math
 import os
-import sys
 
-# Brand palette
-BACKGROUND = "#131217"
-NIGHT = "#0A0A0D"
-DUSK_PURPLE = "#13134A"
+# ── Brand palette ──────────────────────────────────────────────────────────────
+
+# Light theme (article embeds)
+LIGHT_BG = "#F7F7F8"
+LIGHT_CARD = "#FFFFFF"
+LIGHT_BORDER = "#E5E5E7"
+LIGHT_GRID = "#E5E5E7"
+LIGHT_TEXT_PRIMARY = "#1A1A1A"
+LIGHT_TEXT_SECONDARY = "#6B6B6B"
+LIGHT_TEXT_MUTED = "#999999"
+
+# Dark theme (social, hero)
+DARK_BG = "#131217"
+DARK_CARD = "#1A1A2E"
+DARK_GRID = "#2A2A3E"
+DARK_TEXT_PRIMARY = "#FFFFFF"
+DARK_TEXT_SECONDARY = "#E8E8E8"
+DARK_TEXT_MUTED = "#888899"
+
+# Data colors
 FREQ_PURPLE = "#3838E6"
-MED_GREEN = "#24CB71"
-WHITE = "#FFFFFF"
-FROST = "#E8E8E8"
+PURPLE_LIGHT = "#6B6BF0"  # lighter variant for area fills
+GRAY_PRIMARY = "#9CA3AF"  # secondary data series
+GRAY_DARK = "#6B7280"     # darker gray for emphasis
+MED_GREEN = "#24CB71"     # positive/accent (used sparingly)
 
-SERIES_COLORS = [FREQ_PURPLE, MED_GREEN, "#A78BFA", "#F59E0B", "#EC4899"]
+# Shared
+FONT_TITLE = "Tiempos Headline, Georgia, Times New Roman, serif"
+FONT_BODY = "Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif"
 
-# Chart dimensions
 DEFAULT_WIDTH = 1200
-DEFAULT_HEIGHT = 700
-PADDING = {"top": 70, "right": 60, "bottom": 70, "left": 80}
+DEFAULT_HEIGHT = 680
 
 
 def escape_xml(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-def nice_ticks(min_val, max_val, target_count=5):
-    """Generate nice round tick values for an axis."""
+def nice_ticks(min_val, max_val, count=5):
     if min_val == max_val:
         return [min_val]
-    raw_step = (max_val - min_val) / target_count
-    magnitude = 10 ** math.floor(math.log10(raw_step))
-    residual = raw_step / magnitude
-    if residual <= 1.5:
-        nice_step = 1 * magnitude
-    elif residual <= 3:
-        nice_step = 2 * magnitude
-    elif residual <= 7:
-        nice_step = 5 * magnitude
-    else:
-        nice_step = 10 * magnitude
-    start = math.floor(min_val / nice_step) * nice_step
+    raw = (max_val - min_val) / count
+    mag = 10 ** math.floor(math.log10(max(abs(raw), 1e-10)))
+    r = raw / mag
+    if r <= 1.5: step = mag
+    elif r <= 3: step = 2 * mag
+    elif r <= 7: step = 5 * mag
+    else: step = 10 * mag
+    start = math.floor(min_val / step) * step
     ticks = []
-    val = start
-    while val <= max_val + nice_step * 0.5:
-        ticks.append(val)
-        val += nice_step
+    v = start
+    while v <= max_val + step * 0.5:
+        ticks.append(round(v, 10))
+        v += step
     return ticks
 
 
-def format_value(v):
-    """Format a numeric value for display."""
+def fmt(v, suffix=""):
+    """Format a number for axis/label display."""
     if abs(v) >= 1_000_000_000:
-        return f"${v / 1_000_000_000:.1f}B"
+        return f"${v/1e9:.1f}B{suffix}"
     if abs(v) >= 1_000_000:
-        return f"${v / 1_000_000:.1f}M"
+        return f"${v/1e6:.1f}M{suffix}"
     if abs(v) >= 1_000:
-        return f"${v / 1_000:.0f}K" if v == int(v) else f"{v:,.0f}"
+        return f"{v/1e3:.0f}k{suffix}" if v == int(v) else f"{v:,.0f}{suffix}"
     if v == int(v):
-        return str(int(v))
-    return f"{v:.1f}"
+        return f"{int(v)}{suffix}"
+    return f"{v:.1f}{suffix}"
 
 
-def svg_header(width, height, title, source=None):
-    """Generate SVG header with background and title."""
-    lines = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">',
-        f'  <rect width="{width}" height="{height}" fill="{BACKGROUND}"/>',
-        f'  <text x="{PADDING["left"]}" y="40" fill="{WHITE}" font-family="Tiempos Headline, Georgia, serif" font-size="20" font-weight="600">{escape_xml(title)}</text>',
-    ]
-    if source:
-        lines.append(
-            f'  <text x="{PADDING["left"]}" y="{height - 15}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="10" opacity="0.7">Source: {escape_xml(source)}</text>'
-        )
-    return "\n".join(lines)
+class Theme:
+    def __init__(self, dark=False):
+        self.dark = dark
+        if dark:
+            self.bg = DARK_BG
+            self.card = DARK_CARD
+            self.grid = DARK_GRID
+            self.text1 = DARK_TEXT_PRIMARY
+            self.text2 = DARK_TEXT_SECONDARY
+            self.muted = DARK_TEXT_MUTED
+        else:
+            self.bg = LIGHT_BG
+            self.card = LIGHT_CARD
+            self.grid = LIGHT_GRID
+            self.text1 = LIGHT_TEXT_PRIMARY
+            self.text2 = LIGHT_TEXT_SECONDARY
+            self.muted = LIGHT_TEXT_MUTED
 
 
-def svg_footer():
-    return "</svg>"
+# ── Chart: Line ────────────────────────────────────────────────────────────────
 
+def generate_line_chart(data, title, w, h, source, subtitle, theme):
+    t = Theme(theme == "dark")
+    pad = {"top": 90, "right": 140, "bottom": 70, "left": 65}
+    series = data["series"]
 
-def generate_line_chart(data, title, width, height, source=None):
-    """Generate a line chart SVG."""
-    series_list = data["series"]
-    chart_left = PADDING["left"]
-    chart_right = width - PADDING["right"]
-    chart_top = PADDING["top"]
-    chart_bottom = height - PADDING["bottom"]
-    chart_w = chart_right - chart_left
-    chart_h = chart_bottom - chart_top
+    cl, cr = pad["left"], w - pad["right"]
+    ct, cb = pad["top"], h - pad["bottom"]
+    cw, ch = cr - cl, cb - ct
 
-    # Collect all values for axis scaling
-    all_years = []
-    all_values = []
-    for s in series_list:
-        for pt in s["values"]:
-            all_years.append(pt["year"])
-            all_values.append(pt["value"])
+    all_x = [p["year"] for s in series for p in s["values"]]
+    all_y = [p["value"] for s in series for p in s["values"]]
+    x0, x1 = min(all_x), max(all_x)
+    y0 = min(0, min(all_y))
+    y1 = max(all_y) * 1.12
+    yticks = nice_ticks(y0, y1, 5)
+    if yticks:
+        y0, y1 = min(yticks), max(yticks)
 
-    min_year, max_year = min(all_years), max(all_years)
-    min_val = min(0, min(all_values))
-    max_val = max(all_values) * 1.1
+    xp = lambda yr: cl + (yr - x0) / max(x1 - x0, 1) * cw
+    yp = lambda v: cb - (v - y0) / max(y1 - y0, 1) * ch
 
-    y_ticks = nice_ticks(min_val, max_val, 5)
-    if y_ticks:
-        max_val = max(y_ticks)
-        min_val = min(y_ticks)
+    colors = [FREQ_PURPLE, GRAY_PRIMARY, GRAY_DARK, MED_GREEN, PURPLE_LIGHT]
+    widths = [2.5, 1.8, 1.8, 1.8, 1.8]  # primary thicker
 
-    def x_pos(year):
-        if max_year == min_year:
-            return chart_left + chart_w / 2
-        return chart_left + (year - min_year) / (max_year - min_year) * chart_w
+    o = []
+    # Background
+    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
+    o.append(f'<rect width="{w}" height="{h}" fill="{t.bg}" rx="12"/>')
 
-    def y_pos(val):
-        if max_val == min_val:
-            return chart_top + chart_h / 2
-        return chart_bottom - (val - min_val) / (max_val - min_val) * chart_h
+    # Title block
+    o.append(f'<text x="{pad["left"]}" y="38" fill="{t.text1}" font-family="{FONT_TITLE}" font-size="22" font-weight="700">{escape_xml(title)}</text>')
+    if subtitle:
+        o.append(f'<text x="{pad["left"]}" y="60" fill="{t.muted}" font-family="{FONT_BODY}" font-size="13">{escape_xml(subtitle)}</text>')
 
-    parts = [svg_header(width, height, title, source)]
-
-    # Grid lines
-    for tick in y_ticks:
-        y = y_pos(tick)
-        parts.append(f'  <line x1="{chart_left}" y1="{y:.1f}" x2="{chart_right}" y2="{y:.1f}" stroke="{DUSK_PURPLE}" stroke-width="1"/>')
-        parts.append(f'  <text x="{chart_left - 10}" y="{y + 4:.1f}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">{format_value(tick)}</text>')
+    # Y-axis grid + labels
+    for tick in yticks:
+        y = yp(tick)
+        o.append(f'<line x1="{cl}" y1="{y:.1f}" x2="{cr}" y2="{y:.1f}" stroke="{t.grid}" stroke-width="0.75"/>')
+        label = fmt(tick)
+        o.append(f'<text x="{cl - 12}" y="{y + 4:.1f}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="12" text-anchor="end">{label}</text>')
 
     # X-axis labels
-    year_range = max_year - min_year
-    step = max(1, year_range // 8)
-    for year in range(min_year, max_year + 1, step):
-        x = x_pos(year)
-        parts.append(f'  <text x="{x:.1f}" y="{chart_bottom + 25}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">{year}</text>')
+    xrange = x1 - x0
+    xstep = max(1, xrange // 6)
+    for yr in range(x0, x1 + 1, xstep):
+        x = xp(yr)
+        o.append(f'<text x="{x:.1f}" y="{cb + 28}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="12" text-anchor="middle">{yr}</text>')
+
+    # Area fill for primary series (subtle)
+    if len(series) > 0:
+        pts = sorted(series[0]["values"], key=lambda p: p["year"])
+        fill_color = FREQ_PURPLE if not t.dark else FREQ_PURPLE
+        area_path = f"M {xp(pts[0]['year']):.1f} {cb:.1f}"
+        for p in pts:
+            area_path += f" L {xp(p['year']):.1f} {yp(p['value']):.1f}"
+        area_path += f" L {xp(pts[-1]['year']):.1f} {cb:.1f} Z"
+        o.append(f'<path d="{area_path}" fill="{fill_color}" opacity="0.06"/>')
 
     # Data lines
-    for i, s in enumerate(series_list):
-        color = SERIES_COLORS[i % len(SERIES_COLORS)]
-        points = sorted(s["values"], key=lambda p: p["year"])
-        path_parts = []
-        for j, pt in enumerate(points):
-            x = x_pos(pt["year"])
-            y = y_pos(pt["value"])
-            if j == 0:
-                path_parts.append(f"M {x:.1f} {y:.1f}")
-            else:
-                path_parts.append(f"L {x:.1f} {y:.1f}")
-        path_d = " ".join(path_parts)
-        parts.append(f'  <path d="{path_d}" fill="none" stroke="{color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>')
+    for i, s in enumerate(series):
+        color = colors[i % len(colors)]
+        sw = widths[i % len(widths)]
+        pts = sorted(s["values"], key=lambda p: p["year"])
 
-        # End label
-        last = points[-1]
-        lx = x_pos(last["year"])
-        ly = y_pos(last["value"])
-        parts.append(f'  <circle cx="{lx:.1f}" cy="{ly:.1f}" r="4" fill="{color}"/>')
-        parts.append(f'  <text x="{lx + 10:.1f}" y="{ly + 4:.1f}" fill="{color}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">{escape_xml(s["name"])}</text>')
+        # Line path
+        d = " ".join(
+            f"{'M' if j == 0 else 'L'} {xp(p['year']):.1f} {yp(p['value']):.1f}"
+            for j, p in enumerate(pts)
+        )
+        dash = "" if i == 0 else ' stroke-dasharray="6,4"' if i > 1 else ""
+        o.append(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{sw}"{dash} stroke-linecap="round" stroke-linejoin="round"/>')
 
-    parts.append(svg_footer())
-    return "\n".join(parts)
+        # End point + label
+        last = pts[-1]
+        lx, ly = xp(last["year"]), yp(last["value"])
+        o.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="4" fill="{color}"/>')
+        # Label with value
+        label_text = s["name"]
+        if "label_suffix" in s:
+            label_text += f" {s['label_suffix']}"
+        o.append(f'<text x="{lx + 12:.1f}" y="{ly - 2:.1f}" fill="{color}" font-family="{FONT_BODY}" font-size="12" font-weight="600">{escape_xml(label_text)}</text>')
+
+    # Source
+    if source:
+        o.append(f'<text x="{pad["left"]}" y="{h - 18}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="10" opacity="0.65">Source: {escape_xml(source)}</text>')
+
+    o.append("</svg>")
+    return "\n".join(o)
 
 
-def generate_bar_chart(data, title, width, height, source=None):
-    """Generate a grouped vertical bar chart SVG."""
-    categories = data["categories"]
-    series_list = data["series"]
-    chart_left = PADDING["left"]
-    chart_right = width - PADDING["right"]
-    chart_top = PADDING["top"]
-    chart_bottom = height - PADDING["bottom"]
-    chart_w = chart_right - chart_left
-    chart_h = chart_bottom - chart_top
+# ── Chart: Bar ─────────────────────────────────────────────────────────────────
 
-    all_values = [v for s in series_list for v in s["values"]]
-    min_val = min(0, min(all_values))
-    max_val = max(all_values) * 1.15
+def generate_bar_chart(data, title, w, h, source, subtitle, theme):
+    t = Theme(theme == "dark")
+    pad = {"top": 90, "right": 50, "bottom": 70, "left": 65}
+    cats = data["categories"]
+    series = data["series"]
 
-    y_ticks = nice_ticks(min_val, max_val, 5)
-    if y_ticks:
-        max_val = max(y_ticks)
-        min_val = min(y_ticks)
+    cl, cr = pad["left"], w - pad["right"]
+    ct, cb = pad["top"], h - pad["bottom"]
+    cw, ch = cr - cl, cb - ct
 
-    def y_pos(val):
-        if max_val == min_val:
-            return chart_top + chart_h / 2
-        return chart_bottom - (val - min_val) / (max_val - min_val) * chart_h
+    all_v = [v for s in series for v in s["values"]]
+    y0 = 0
+    y1 = max(all_v) * 1.15
+    yticks = nice_ticks(y0, y1, 5)
+    if yticks: y1 = max(yticks)
 
-    n_cats = len(categories)
-    n_series = len(series_list)
-    group_width = chart_w / n_cats
-    bar_gap = group_width * 0.15
-    bar_area = group_width - bar_gap * 2
-    bar_width = bar_area / n_series
-    inner_gap = bar_width * 0.1
-    bar_width -= inner_gap
+    yp = lambda v: cb - (v - y0) / max(y1 - y0, 1) * ch
 
-    parts = [svg_header(width, height, title, source)]
+    n_cats = len(cats)
+    n_ser = len(series)
+    gw = cw / n_cats
+    margin = gw * 0.2
+    bar_area = gw - margin * 2
+    bw = bar_area / n_ser
+    gap = bw * 0.12
+    bw -= gap
 
-    # Grid lines
-    for tick in y_ticks:
-        y = y_pos(tick)
-        parts.append(f'  <line x1="{chart_left}" y1="{y:.1f}" x2="{chart_right}" y2="{y:.1f}" stroke="{DUSK_PURPLE}" stroke-width="1"/>')
-        parts.append(f'  <text x="{chart_left - 10}" y="{y + 4:.1f}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">{format_value(tick)}</text>')
+    bar_colors = [FREQ_PURPLE, GRAY_PRIMARY, MED_GREEN, GRAY_DARK]
+
+    o = []
+    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
+    o.append(f'<rect width="{w}" height="{h}" fill="{t.bg}" rx="12"/>')
+    o.append(f'<text x="{pad["left"]}" y="38" fill="{t.text1}" font-family="{FONT_TITLE}" font-size="22" font-weight="700">{escape_xml(title)}</text>')
+    if subtitle:
+        o.append(f'<text x="{pad["left"]}" y="60" fill="{t.muted}" font-family="{FONT_BODY}" font-size="13">{escape_xml(subtitle)}</text>')
+
+    # Grid
+    for tick in yticks:
+        y = yp(tick)
+        o.append(f'<line x1="{cl}" y1="{y:.1f}" x2="{cr}" y2="{y:.1f}" stroke="{t.grid}" stroke-width="0.75"/>')
+        o.append(f'<text x="{cl - 12}" y="{y + 4:.1f}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="12" text-anchor="end">{fmt(tick)}</text>')
 
     # Bars
-    zero_y = y_pos(0)
-    for ci, cat in enumerate(categories):
-        group_x = chart_left + ci * group_width
-        # Category label
-        cx = group_x + group_width / 2
-        parts.append(f'  <text x="{cx:.1f}" y="{chart_bottom + 25}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">{escape_xml(cat)}</text>')
+    zy = yp(0)
+    for ci, cat in enumerate(cats):
+        gx = cl + ci * gw
+        cx = gx + gw / 2
+        o.append(f'<text x="{cx:.1f}" y="{cb + 28}" fill="{t.text2}" font-family="{FONT_BODY}" font-size="13" text-anchor="middle">{escape_xml(cat)}</text>')
 
-        for si, s in enumerate(series_list):
-            color = SERIES_COLORS[si % len(SERIES_COLORS)]
+        for si, s in enumerate(series):
+            color = bar_colors[si % len(bar_colors)]
             val = s["values"][ci]
-            bx = group_x + bar_gap + si * (bar_width + inner_gap)
-            by = y_pos(val)
-            bh = abs(zero_y - by)
-            bar_y = min(by, zero_y)
-            parts.append(f'  <rect x="{bx:.1f}" y="{bar_y:.1f}" width="{bar_width:.1f}" height="{bh:.1f}" fill="{color}" opacity="0.85" rx="2"/>')
-            # Value label on top
-            parts.append(f'  <text x="{bx + bar_width / 2:.1f}" y="{bar_y - 6:.1f}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">{format_value(val)}</text>')
+            bx = gx + margin + si * (bw + gap)
+            by = yp(val)
+            bh = abs(zy - by)
+            bar_y = min(by, zy)
+            o.append(f'<rect x="{bx:.1f}" y="{bar_y:.1f}" width="{bw:.1f}" height="{bh:.1f}" fill="{color}" rx="3"/>')
+            o.append(f'<text x="{bx + bw/2:.1f}" y="{bar_y - 8:.1f}" fill="{t.text2}" font-family="{FONT_BODY}" font-size="12" font-weight="600" text-anchor="middle">{fmt(val)}</text>')
 
-    # Legend
-    legend_x = chart_right - 20
-    for si, s in enumerate(series_list):
-        color = SERIES_COLORS[si % len(SERIES_COLORS)]
-        ly = chart_top + si * 22
-        parts.append(f'  <rect x="{legend_x - 80}" y="{ly - 8}" width="12" height="12" fill="{color}" rx="2"/>')
-        parts.append(f'  <text x="{legend_x - 62}" y="{ly + 2}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12">{escape_xml(s["name"])}</text>')
+    # Legend (top right)
+    for si, s in enumerate(series):
+        color = bar_colors[si % len(bar_colors)]
+        lx = cr - 10
+        ly = pad["top"] - 20 - (n_ser - 1 - si) * 22
+        o.append(f'<rect x="{lx - 80}" y="{ly - 9}" width="14" height="14" fill="{color}" rx="3"/>')
+        o.append(f'<text x="{lx - 60}" y="{ly + 2}" fill="{t.text2}" font-family="{FONT_BODY}" font-size="12">{escape_xml(s["name"])}</text>')
 
-    parts.append(svg_footer())
-    return "\n".join(parts)
+    if source:
+        o.append(f'<text x="{pad["left"]}" y="{h - 18}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="10" opacity="0.65">Source: {escape_xml(source)}</text>')
+
+    o.append("</svg>")
+    return "\n".join(o)
 
 
-def generate_horizontal_bar_chart(data, title, width, height, source=None):
-    """Generate a horizontal bar chart SVG."""
+# ── Chart: Horizontal Bar ──────────────────────────────────────────────────────
+
+def generate_horizontal_bar(data, title, w, h, source, subtitle, theme):
+    t = Theme(theme == "dark")
     items = data["items"]
-    chart_left = PADDING["left"] + 100  # Extra room for labels
-    chart_right = width - PADDING["right"]
-    chart_top = PADDING["top"]
-    chart_bottom = height - PADDING["bottom"]
-    chart_w = chart_right - chart_left
-    chart_h = chart_bottom - chart_top
+    n = len(items)
 
-    n_items = len(items)
-    max_val = max(item["value"] for item in items) * 1.1
-    bar_height = min(35, chart_h / n_items * 0.7)
-    bar_gap = (chart_h - bar_height * n_items) / (n_items + 1)
+    label_width = 180
+    pad = {"top": 90, "right": 80, "bottom": 50, "left": label_width + 20}
+    cl, cr = pad["left"], w - pad["right"]
+    ct, cb = pad["top"], h - pad["bottom"]
+    cw, ch = cr - cl, cb - ct
 
-    parts = [svg_header(width, height, title, source)]
+    max_val = max(item["value"] for item in items)
+    bh = min(40, ch / n * 0.65)
+    spacing = (ch - bh * n) / (n + 1)
+
+    o = []
+    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
+    o.append(f'<rect width="{w}" height="{h}" fill="{t.bg}" rx="12"/>')
+    o.append(f'<text x="30" y="38" fill="{t.text1}" font-family="{FONT_TITLE}" font-size="22" font-weight="700">{escape_xml(title)}</text>')
+    if subtitle:
+        o.append(f'<text x="30" y="60" fill="{t.muted}" font-family="{FONT_BODY}" font-size="13">{escape_xml(subtitle)}</text>')
 
     for i, item in enumerate(items):
-        by = chart_top + bar_gap + i * (bar_height + bar_gap)
-        bw = (item["value"] / max_val) * chart_w
-        color = FREQ_PURPLE if i % 2 == 0 else MED_GREEN
+        by = ct + spacing + i * (bh + spacing)
+        bw_val = (item["value"] / max_val) * cw
+        color = FREQ_PURPLE if i == 0 else MED_GREEN if i == 1 else GRAY_PRIMARY
 
         # Label
-        parts.append(f'  <text x="{chart_left - 10}" y="{by + bar_height / 2 + 4:.1f}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end">{escape_xml(item["label"])}</text>')
+        o.append(f'<text x="{cl - 16}" y="{by + bh/2 + 5:.1f}" fill="{t.text2}" font-family="{FONT_BODY}" font-size="14" text-anchor="end">{escape_xml(item["label"])}</text>')
         # Bar
-        parts.append(f'  <rect x="{chart_left}" y="{by:.1f}" width="{bw:.1f}" height="{bar_height:.1f}" fill="{color}" opacity="0.85" rx="3"/>')
-        # Value
-        parts.append(f'  <text x="{chart_left + bw + 8:.1f}" y="{by + bar_height / 2 + 4:.1f}" fill="{WHITE}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">{format_value(item["value"])}</text>')
+        o.append(f'<rect x="{cl}" y="{by:.1f}" width="{bw_val:.1f}" height="{bh:.1f}" fill="{color}" rx="4"/>')
+        # Value at end of bar
+        val_str = fmt(item["value"])
+        o.append(f'<text x="{cl + bw_val + 12:.1f}" y="{by + bh/2 + 5:.1f}" fill="{t.text1}" font-family="{FONT_BODY}" font-size="14" font-weight="700">{val_str}</text>')
 
-    parts.append(svg_footer())
-    return "\n".join(parts)
+    if source:
+        o.append(f'<text x="30" y="{h - 14}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="10" opacity="0.65">Source: {escape_xml(source)}</text>')
+
+    o.append("</svg>")
+    return "\n".join(o)
 
 
-def generate_social_card(title, stat_label, stat_value, width=1080, height=1080):
-    """Generate a social media card SVG."""
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">',
-        f'  <rect width="{width}" height="{height}" fill="{BACKGROUND}"/>',
-        # Top accent line
-        f'  <rect x="80" y="80" width="120" height="4" fill="{FREQ_PURPLE}" rx="2"/>',
-        # Title
-        f'  <text x="80" y="180" fill="{WHITE}" font-family="Tiempos Headline, Georgia, serif" font-size="42" font-weight="600">',
-    ]
-    # Word-wrap title (rough, ~25 chars per line at this size)
+# ── Chart: Comparison Table ────────────────────────────────────────────────────
+
+def generate_comparison_table(data, title, w, h, source, subtitle, theme):
+    """Clean comparison table like the Basquiat vs Banksy milestone table."""
+    t = Theme(theme == "dark")
+    cols = data["columns"]  # ["", "Basquiat", "Banksy"]
+    rows = data["rows"]     # [["First street works", "Late 1970s", "Mid-1990s"], ...]
+
+    n_cols = len(cols)
+    n_rows = len(rows)
+    pad = {"top": 80, "left": 40, "right": 40}
+    table_w = w - pad["left"] - pad["right"]
+    col_w = table_w / n_cols
+    row_h = 52
+    header_h = 48
+    table_top = pad["top"]
+    table_h = header_h + row_h * n_rows
+
+    # Auto height
+    h = max(h, table_top + table_h + 60)
+
+    o = []
+    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
+    o.append(f'<rect width="{w}" height="{h}" fill="{t.card}" rx="12"/>')
+
+    if title:
+        o.append(f'<text x="{pad["left"]}" y="45" fill="{t.text1}" font-family="{FONT_TITLE}" font-size="20" font-weight="700">{escape_xml(title)}</text>')
+
+    # Header row
+    hy = table_top
+    # Header underline (purple accent)
+    o.append(f'<line x1="{pad["left"]}" y1="{hy + header_h}" x2="{w - pad["right"]}" y2="{hy + header_h}" stroke="{FREQ_PURPLE}" stroke-width="2"/>')
+
+    for ci, col in enumerate(cols):
+        cx = pad["left"] + ci * col_w
+        if ci == 0:
+            continue  # first col is row labels, no header
+        o.append(f'<text x="{cx + col_w/2}" y="{hy + 32}" fill="{t.text1}" font-family="{FONT_BODY}" font-size="15" font-weight="700" text-anchor="middle">{escape_xml(col)}</text>')
+
+    # Data rows
+    for ri, row in enumerate(rows):
+        ry = table_top + header_h + ri * row_h
+        # Row separator
+        if ri > 0:
+            o.append(f'<line x1="{pad["left"]}" y1="{ry}" x2="{w - pad["right"]}" y2="{ry}" stroke="{t.grid}" stroke-width="0.75"/>')
+
+        for ci, cell in enumerate(row):
+            cx = pad["left"] + ci * col_w
+            if ci == 0:
+                # Row label (muted)
+                o.append(f'<text x="{cx + 8}" y="{ry + 33}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="14">{escape_xml(cell)}</text>')
+            else:
+                # Data cell (bold)
+                o.append(f'<text x="{cx + col_w/2}" y="{ry + 33}" fill="{t.text1}" font-family="{FONT_BODY}" font-size="14" font-weight="600" text-anchor="middle">{escape_xml(cell)}</text>')
+
+    if source:
+        o.append(f'<text x="{pad["left"]}" y="{h - 14}" fill="{t.muted}" font-family="{FONT_BODY}" font-size="10" opacity="0.65">{escape_xml(source)}</text>')
+
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+# ── Social Card ────────────────────────────────────────────────────────────────
+
+def generate_social_card(title, data, w=1080, h=1080):
+    stat_value = data.get("stat_value", "")
+    stat_label = data.get("stat_label", "")
+
+    o = []
+    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
+    o.append(f'<rect width="{w}" height="{h}" fill="{DARK_BG}" rx="0"/>')
+
+    # Accent stripe at top
+    o.append(f'<rect x="0" y="0" width="{w}" height="5" fill="{FREQ_PURPLE}"/>')
+
+    # Title with word wrap
     words = title.split()
     lines = []
-    current = ""
-    for w in words:
-        if len(current + " " + w) > 28 and current:
-            lines.append(current)
-            current = w
+    cur = ""
+    for word in words:
+        test = (cur + " " + word).strip()
+        if len(test) > 24 and cur:
+            lines.append(cur)
+            cur = word
         else:
-            current = (current + " " + w).strip()
-    if current:
-        lines.append(current)
+            cur = test
+    if cur:
+        lines.append(cur)
 
-    for j, line in enumerate(lines):
-        dy = "0" if j == 0 else "52"
-        parts.append(f'    <tspan x="80" dy="{dy}">{escape_xml(line)}</tspan>')
-    parts.append("  </text>")
+    ty = 140
+    for i, line in enumerate(lines):
+        o.append(f'<text x="80" y="{ty + i * 56}" fill="{DARK_TEXT_PRIMARY}" font-family="{FONT_TITLE}" font-size="46" font-weight="700">{escape_xml(line)}</text>')
 
-    # Big stat
-    stat_y = 180 + len(lines) * 52 + 120
-    parts.append(f'  <text x="80" y="{stat_y}" fill="{FREQ_PURPLE}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="72" font-weight="700">{escape_xml(stat_value)}</text>')
-    parts.append(f'  <text x="80" y="{stat_y + 45}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="20">{escape_xml(stat_label)}</text>')
+    # Stat block
+    stat_y = ty + len(lines) * 56 + 100
+    o.append(f'<text x="80" y="{stat_y}" fill="{FREQ_PURPLE}" font-family="{FONT_BODY}" font-size="80" font-weight="800">{escape_xml(stat_value)}</text>')
+    o.append(f'<text x="80" y="{stat_y + 50}" fill="{DARK_TEXT_SECONDARY}" font-family="{FONT_BODY}" font-size="20">{escape_xml(stat_label)}</text>')
 
-    # Bottom branding
-    parts.append(f'  <text x="80" y="{height - 60}" fill="{FROST}" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="14" opacity="0.6">Masterworks Academy</text>')
-    parts.append(f'  <rect x="80" y="{height - 45}" width="80" height="3" fill="{FREQ_PURPLE}" rx="1.5"/>')
+    # Bottom bar
+    o.append(f'<rect x="0" y="{h - 80}" width="{w}" height="80" fill="{DARK_CARD}"/>')
+    o.append(f'<text x="80" y="{h - 35}" fill="{DARK_TEXT_MUTED}" font-family="{FONT_BODY}" font-size="16" letter-spacing="2">MASTERWORKS ACADEMY</text>')
 
-    parts.append(svg_footer())
-    return "\n".join(parts)
+    o.append("</svg>")
+    return "\n".join(o)
 
+
+# ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Masterworks-branded SVG charts")
-    parser.add_argument("--type", required=True, choices=["line", "bar", "horizontal-bar", "social-card"])
+    parser = argparse.ArgumentParser(description="Masterworks SVG chart generator v2")
+    parser.add_argument("--type", required=True, choices=["line", "bar", "horizontal-bar", "comparison-table", "social-card"])
     parser.add_argument("--title", required=True)
-    parser.add_argument("--data", required=True, help="JSON string with chart data")
-    parser.add_argument("--output", required=True, help="Output SVG file path")
+    parser.add_argument("--data", required=True)
+    parser.add_argument("--output", required=True)
     parser.add_argument("--width", type=int, default=None)
     parser.add_argument("--height", type=int, default=None)
-    parser.add_argument("--source", default=None, help="Source attribution text")
+    parser.add_argument("--source", default=None)
+    parser.add_argument("--subtitle", default=None)
+    parser.add_argument("--theme", default="light", choices=["light", "dark"])
     args = parser.parse_args()
 
     data = json.loads(args.data)
-
     w = args.width or (1080 if args.type == "social-card" else DEFAULT_WIDTH)
     h = args.height or (1080 if args.type == "social-card" else DEFAULT_HEIGHT)
 
     if args.type == "line":
-        svg = generate_line_chart(data, args.title, w, h, args.source)
+        svg = generate_line_chart(data, args.title, w, h, args.source, args.subtitle, args.theme)
     elif args.type == "bar":
-        svg = generate_bar_chart(data, args.title, w, h, args.source)
+        svg = generate_bar_chart(data, args.title, w, h, args.source, args.subtitle, args.theme)
     elif args.type == "horizontal-bar":
-        svg = generate_horizontal_bar_chart(data, args.title, w, h, args.source)
+        svg = generate_horizontal_bar(data, args.title, w, h, args.source, args.subtitle, args.theme)
+    elif args.type == "comparison-table":
+        svg = generate_comparison_table(data, args.title, w, h, args.source, args.subtitle, args.theme)
     elif args.type == "social-card":
-        svg = generate_social_card(args.title, data.get("stat_label", ""), data.get("stat_value", ""), w, h)
+        svg = generate_social_card(args.title, data, w, h)
 
     os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
     with open(args.output, "w") as f:
         f.write(svg)
-
     print(f"Generated: {args.output} ({w}x{h})")
 
 

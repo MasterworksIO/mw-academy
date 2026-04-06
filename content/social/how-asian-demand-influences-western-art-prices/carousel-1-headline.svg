@@ -1,12 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
-  <rect width="1080" height="1080" fill="#131217"/>
-  <rect x="80" y="80" width="120" height="4" fill="#3838E6" rx="2"/>
-  <text x="80" y="180" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, serif" font-size="42" font-weight="600">
-    <tspan x="80" dy="0">How Asian Demand Influences</tspan>
-    <tspan x="80" dy="52">Western Art Prices</tspan>
-  </text>
-  <text x="80" y="404" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="72" font-weight="700">26%</text>
-  <text x="80" y="449" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="20">of global auction sales driven by Asia-Pacific buyers in 2024</text>
-  <text x="80" y="1020" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="14" opacity="0.6">Masterworks Academy</text>
-  <rect x="80" y="1035" width="80" height="3" fill="#3838E6" rx="1.5"/>
+<rect width="1080" height="1080" fill="#131217" rx="0"/>
+<rect x="0" y="0" width="1080" height="5" fill="#3838E6"/>
+<text x="80" y="140" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="46" font-weight="700">How Asian Demand</text>
+<text x="80" y="196" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="46" font-weight="700">Influences Western Art</text>
+<text x="80" y="252" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="46" font-weight="700">Prices</text>
+<text x="80" y="408" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="80" font-weight="800">26%</text>
+<text x="80" y="458" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20">of global auction sales driven by Asia-Pacific buyers in 2024</text>
+<rect x="0" y="1000" width="1080" height="80" fill="#1A1A2E"/>
+<text x="80" y="1045" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" letter-spacing="2">MASTERWORKS ACADEMY</text>
 </svg>

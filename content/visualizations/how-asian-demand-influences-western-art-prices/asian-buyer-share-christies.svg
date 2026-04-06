@@ -1,29 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
-  <rect width="1200" height="700" fill="#131217"/>
-  <text x="80" y="40" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, serif" font-size="20" font-weight="600">Asian Buyer Share of Christie's Global Auction Sales</text>
-  <text x="80" y="685" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="10" opacity="0.7">Source: Christie's annual reports, The Value, Observer</text>
-  <line x1="80" y1="630.0" x2="1140" y2="630.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="634.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">0</text>
-  <line x1="80" y1="518.0" x2="1140" y2="518.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="522.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">10</text>
-  <line x1="80" y1="406.0" x2="1140" y2="406.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="410.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">20</text>
-  <line x1="80" y1="294.0" x2="1140" y2="294.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="298.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">30</text>
-  <line x1="80" y1="182.0" x2="1140" y2="182.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="186.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">40</text>
-  <line x1="80" y1="70.0" x2="1140" y2="70.0" stroke="#13134A" stroke-width="1"/>
-  <text x="70" y="74.0" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">50</text>
-  <text x="80.0" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2020</text>
-  <text x="292.0" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2021</text>
-  <text x="504.0" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2022</text>
-  <text x="716.0" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2023</text>
-  <text x="928.0" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2024</text>
-  <text x="1140.0" y="655" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2025</text>
-  <path d="M 80.0 260.4 L 292.0 282.8 L 504.0 305.2 L 716.0 316.4 L 928.0 338.8 L 1140.0 372.4" fill="none" stroke="#3838E6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="1140.0" cy="372.4" r="4" fill="#3838E6"/>
-  <text x="1150.0" y="376.4" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Asia-Pacific %</text>
-  <path d="M 80.0 238.0 L 292.0 215.6 L 504.0 193.2 L 716.0 182.0 L 928.0 159.6 L 1140.0 170.8" fill="none" stroke="#24CB71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="1140.0" cy="170.8" r="4" fill="#24CB71"/>
-  <text x="1150.0" y="174.8" fill="#24CB71" font-family="Neue Haas Grotesk, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Americas %</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="65" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Asian Buyer Share of Christie's Global Auction Sales</text>
+<text x="65" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Percentage of global auction turnover by region, 2020-2025</text>
+<line x1="65" y1="610.0" x2="1060" y2="610.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="614.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">0</text>
+<line x1="65" y1="506.0" x2="1060" y2="506.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="510.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">10</text>
+<line x1="65" y1="402.0" x2="1060" y2="402.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="406.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">20</text>
+<line x1="65" y1="298.0" x2="1060" y2="298.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="302.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">30</text>
+<line x1="65" y1="194.0" x2="1060" y2="194.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="198.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">40</text>
+<line x1="65" y1="90.0" x2="1060" y2="90.0" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="94.0" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">50</text>
+<text x="65.0" y="638" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2020</text>
+<text x="264.0" y="638" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2021</text>
+<text x="463.0" y="638" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2022</text>
+<text x="662.0" y="638" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2023</text>
+<text x="861.0" y="638" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2024</text>
+<text x="1060.0" y="638" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2025</text>
+<path d="M 65.0 610.0 L 65.0 266.8 L 264.0 287.6 L 463.0 308.4 L 662.0 318.8 L 861.0 339.6 L 1060.0 370.8 L 1060.0 610.0 Z" fill="#3838E6" opacity="0.06"/>
+<path d="M 65.0 266.8 L 264.0 287.6 L 463.0 308.4 L 662.0 318.8 L 861.0 339.6 L 1060.0 370.8" fill="none" stroke="#3838E6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1060.0" cy="370.8" r="4" fill="#3838E6"/>
+<text x="1072.0" y="368.8" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Asia-Pacific 23%</text>
+<path d="M 65.0 246.0 L 264.0 225.2 L 463.0 204.4 L 662.0 194.0 L 861.0 173.2 L 1060.0 183.6" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1060.0" cy="183.6" r="4" fill="#9CA3AF"/>
+<text x="1072.0" y="181.6" fill="#9CA3AF" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Americas 41%</text>
+<text x="65" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Christie's annual reports, The Value, Observer</text>
 </svg>
