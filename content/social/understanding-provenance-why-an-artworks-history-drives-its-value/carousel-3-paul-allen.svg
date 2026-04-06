@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+<rect width="1080" height="1080" fill="#131217" rx="0"/>
+<rect x="0" y="0" width="1080" height="6" fill="#495DE5"/>
+<text x="100" y="200" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">The Celebrity</text>
+<text x="100" y="264" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">Provenance Effect</text>
+<text x="100" y="440" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800">$1.5B</text>
+<text x="100" y="496" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30">Paul Allen collection, Christie's 2022</text>
+<text x="100" y="600" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">Highest-grossing single-owner</text>
+<text x="100" y="640" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">auction in history.</text>
+<text x="100" y="720" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">Every single lot sold.</text>
+</svg>

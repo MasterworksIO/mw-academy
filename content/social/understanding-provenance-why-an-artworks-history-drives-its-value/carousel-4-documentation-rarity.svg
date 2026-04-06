@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+<rect width="1080" height="1080" fill="#131217" rx="0"/>
+<rect x="0" y="0" width="1080" height="6" fill="#495DE5"/>
+<text x="100" y="200" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">Most Artworks</text>
+<text x="100" y="264" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">Lack Documentation</text>
+<text x="100" y="440" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800">Only 2%</text>
+<text x="100" y="496" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30">of auctioned artworks have certificates</text>
+<text x="100" y="600" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">14% have pedigree records.</text>
+<text x="100" y="648" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">5% have exhibition histories.</text>
+<text x="100" y="696" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">5% appear in art literature.</text>
+<text x="100" y="790" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">Complete provenance is the exception,</text>
+<text x="100" y="830" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">not the rule.</text>
+</svg>

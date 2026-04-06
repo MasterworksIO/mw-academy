@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="30" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Provenance Premium by Type</text>
+<text x="30" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Hammer price increase by provenance element</text>
+<!-- Literature References: 54% -->
+<text x="184" y="131" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Literature References</text>
+<rect x="200" y="108" width="820" height="40" fill="#495DE5" rx="4"/>
+<text x="1032" y="133" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">54%</text>
+<!-- Exhibition History: 42% -->
+<text x="184" y="211" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Exhibition History</text>
+<rect x="200" y="188" width="638" height="40" fill="#24CB71" rx="4"/>
+<text x="850" y="213" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">42%</text>
+<!-- Pedigree (Ownership): 21% -->
+<text x="184" y="291" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Pedigree (Ownership)</text>
+<rect x="200" y="268" width="319" height="40" fill="#9CA3AF" rx="4"/>
+<text x="531" y="293" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">21%</text>
+<!-- Certificate of Auth.: 14% -->
+<text x="184" y="371" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Certificate of Auth.</text>
+<rect x="200" y="348" width="213" height="40" fill="#9CA3AF" rx="4"/>
+<text x="425" y="373" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">14%</text>
+<text x="30" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Li et al., European Financial Management, 2022 (3M auction transactions)</text>
+</svg>

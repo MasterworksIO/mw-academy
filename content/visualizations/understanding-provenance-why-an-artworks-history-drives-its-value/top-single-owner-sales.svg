@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="30" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Top Single-Owner Auction Sales</text>
+<text x="30" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Total hammer price by collector sale</text>
+<!-- Paul Allen (2022): $1.5B -->
+<text x="234" y="151" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Paul Allen (2022)</text>
+<rect x="250" y="128" width="750" height="40" fill="#495DE5" rx="4"/>
+<text x="1012" y="153" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$1.5B</text>
+<!-- Macklowe (2021-22): $922.2M -->
+<text x="234" y="241" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Macklowe (2021-22)</text>
+<rect x="250" y="218" width="461" height="40" fill="#24CB71" rx="4"/>
+<text x="723" y="243" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$922.2M</text>
+<!-- Pattie Boyd (2024): ~$3.6M -->
+<text x="234" y="331" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Pattie Boyd (2024)</text>
+<rect x="250" y="308" width="4" height="40" fill="#9CA3AF" rx="4"/>
+<text x="266" y="333" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$3.6M</text>
+<text x="266" y="355" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11">7x high estimate, 100% sell-through</text>
+<text x="30" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Christie's, Sotheby's auction records</text>
+</svg>

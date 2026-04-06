@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460">
+<rect width="1200" height="460" fill="#FFFFFF" rx="12"/>
+<text x="40" y="45" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="20" font-weight="700">Provenance Elements: What They Include and Their Price Impact</text>
+<!-- Header row -->
+<line x1="40" y1="128" x2="1160" y2="128" stroke="#495DE5" stroke-width="2"/>
+<text x="180" y="112" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Element</text>
+<text x="500" y="112" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">What It Covers</text>
+<text x="820" y="112" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Price Premium</text>
+<text x="1020" y="112" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Frequency</text>
+<!-- Row 1: Literature -->
+<text x="48" y="163" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14">Literature</text>
+<text x="500" y="163" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Published in catalogues raisonne, books, articles</text>
+<text x="820" y="163" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">+54%</text>
+<text x="1020" y="163" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">5% of artworks</text>
+<!-- Row separator -->
+<line x1="40" y1="180" x2="1160" y2="180" stroke="#E5E5E7" stroke-width="0.75"/>
+<!-- Row 2: Exhibition -->
+<text x="48" y="215" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14">Exhibition</text>
+<text x="500" y="215" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Shown in museum or gallery exhibitions</text>
+<text x="820" y="215" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">+42%</text>
+<text x="1020" y="215" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">5% of artworks</text>
+<!-- Row separator -->
+<line x1="40" y1="232" x2="1160" y2="232" stroke="#E5E5E7" stroke-width="0.75"/>
+<!-- Row 3: Pedigree -->
+<text x="48" y="267" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14">Pedigree</text>
+<text x="500" y="267" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Named prior owners, dated sales history</text>
+<text x="820" y="267" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">+21%</text>
+<text x="1020" y="267" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">14% of artworks</text>
+<!-- Row separator -->
+<line x1="40" y1="284" x2="1160" y2="284" stroke="#E5E5E7" stroke-width="0.75"/>
+<!-- Row 4: Certificate -->
+<text x="48" y="319" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14">Certificate</text>
+<text x="500" y="319" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Formal authentication document</text>
+<text x="820" y="319" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">+14%</text>
+<text x="1020" y="319" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">2% of artworks</text>
+<text x="40" y="442" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Li et al., European Financial Management, 2022</text>
+</svg>
