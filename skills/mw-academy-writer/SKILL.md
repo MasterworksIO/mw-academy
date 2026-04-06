@@ -221,3 +221,19 @@ After saving, confirm the file path and give a brief summary of:
 - Word count
 - Number of sources cited
 - Any `[NEEDS INTERNAL DATA]` or `[NEEDS INTERNAL REVIEW]` flags that need attention
+
+## Slack Notification
+
+After saving the draft, post a short summary to the `#mw-academy` Slack channel (ID: `C0ARA4CQRQC`) using the `slack_send_message` tool. The message should follow this format:
+
+```
+*New Draft Published:* [Article Title]
+
+[2-3 sentence summary of what the article covers and its key findings.]
+
+~[word count] words · [number] sources (all [year range]) · [number] flags for team review
+
+📄 `content/drafts/[filename].md` on the `academy-platform` branch
+```
+
+Keep the summary tight and useful. The team should be able to read it and know whether the draft needs their attention without opening the file.
