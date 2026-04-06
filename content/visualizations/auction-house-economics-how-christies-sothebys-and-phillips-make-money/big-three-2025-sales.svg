@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="65" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Big Three Auction Houses: 2025 Total Sales</text>
+<text x="65" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Combined $14.1 billion, up ~10% from 2024</text>
+<!-- Y-axis grid -->
+<line x1="65" y1="520" x2="1150" y2="520" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="524" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$0B</text>
+<line x1="65" y1="454" x2="1150" y2="454" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="458" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$1B</text>
+<line x1="65" y1="388" x2="1150" y2="388" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="392" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$2B</text>
+<line x1="65" y1="322" x2="1150" y2="322" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="326" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$3B</text>
+<line x1="65" y1="256" x2="1150" y2="256" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="260" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$4B</text>
+<line x1="65" y1="190" x2="1150" y2="190" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="194" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$5B</text>
+<line x1="65" y1="124" x2="1150" y2="124" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="128" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$6B</text>
+<line x1="65" y1="90" x2="1150" y2="90" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="94" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">$7B</text>
+<!-- Bars: Sotheby's $7.1B -->
+<text x="282" y="548" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">Sotheby's</text>
+<rect x="192" y="57" width="180" height="463" fill="#3838E6" rx="3"/>
+<text x="282" y="49" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">$7.1B</text>
+<!-- Bars: Christie's $6.2B -->
+<text x="607" y="548" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">Christie's</text>
+<rect x="517" y="116" width="180" height="404" fill="#9CA3AF" rx="3"/>
+<text x="607" y="108" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">$6.2B</text>
+<!-- Bars: Phillips $0.93B -->
+<text x="932" y="548" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">Phillips</text>
+<rect x="842" y="459" width="180" height="61" fill="#24CB71" rx="3"/>
+<text x="932" y="451" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">$0.9B</text>
+<!-- Source -->
+<text x="65" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Company reports, 2025</text>
+</svg>

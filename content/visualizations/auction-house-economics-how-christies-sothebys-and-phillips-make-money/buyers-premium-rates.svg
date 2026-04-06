@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="30" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Buyer's Premium Rates: Base Tier Comparison</text>
+<text x="30" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Rate on the first $1M-$1.5M of hammer price, 2025</text>
+<!-- Phillips standard 29% -->
+<text x="184" y="162" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Phillips (standard)</text>
+<rect x="200" y="140" width="680" height="40" fill="#3838E6" rx="4"/>
+<text x="892" y="166" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">29%</text>
+<!-- Christie's 27% -->
+<text x="184" y="262" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Christie's</text>
+<rect x="200" y="240" width="633" height="40" fill="#24CB71" rx="4"/>
+<text x="845" y="266" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">27%</text>
+<!-- Sotheby's 27% -->
+<text x="184" y="362" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Sotheby's</text>
+<rect x="200" y="340" width="633" height="40" fill="#9CA3AF" rx="4"/>
+<text x="845" y="366" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">27%</text>
+<!-- Phillips priority bid 25% -->
+<text x="184" y="462" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">Phillips (priority bid)</text>
+<rect x="200" y="440" width="586" height="40" fill="#6B7280" rx="4"/>
+<text x="798" y="466" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">25%</text>
+<!-- Source -->
+<text x="30" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Published fee schedules, 2025</text>
+</svg>

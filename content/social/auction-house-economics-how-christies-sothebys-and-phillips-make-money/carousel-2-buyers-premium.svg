@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+<rect width="1080" height="1080" fill="#131217" rx="0"/>
+<rect x="0" y="0" width="1080" height="5" fill="#3838E6"/>
+<text x="80" y="140" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="36" font-weight="700">The Buyer's Premium</text>
+<text x="80" y="310" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="110" font-weight="800">$270K</text>
+<text x="80" y="370" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">in fees on a $1M lot at Christie's or Sotheby's</text>
+<text x="80" y="490" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18">At Phillips, the same hammer price costs</text>
+<text x="80" y="520" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18">$290,000 in premium at the standard rate.</text>
+<text x="80" y="610" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18">Base tier rates (first $1M-$1.5M):</text>
+<text x="80" y="660" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Phillips: 29%</text>
+<text x="80" y="700" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Christie's: 27%</text>
+<text x="80" y="740" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Sotheby's: 27%</text>
+<text x="540" y="980" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">Masterworks Academy</text>
+</svg>
