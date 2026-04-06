@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
 <rect width="1080" height="1080" fill="#131217" rx="0"/>
-<rect x="0" y="0" width="1080" height="5" fill="#3838E6"/>
-<text x="80" y="140" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="46" font-weight="700">Singapore and Japan Are</text>
-<text x="80" y="196" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="46" font-weight="700">Rising Fast</text>
-<text x="80" y="352" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="80" font-weight="800">+74%</text>
-<text x="80" y="402" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20">surge in Singapore art imports in 2024</text>
+<rect x="0" y="0" width="1080" height="6" fill="#3838E6"/>
+<text x="100" y="160" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">Singapore Is Rising</text>
+<text x="100" y="224" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">Fast</text>
+<text x="100" y="368" fill="#3838E6" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800">+74%</text>
+<text x="100" y="424" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30">surge in Singapore art imports in 2024, now 5th globally</text>
 </svg>

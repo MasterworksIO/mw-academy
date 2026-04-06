@@ -394,20 +394,25 @@ def generate_social_card(title, data, w=1080, h=1080):
     stat_value = data.get("stat_value", "")
     stat_label = data.get("stat_label", "")
 
+    # Body text from data (optional extra lines below the stat)
+    body_lines = data.get("body", [])
+
     o = []
     o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
     o.append(f'<rect width="{w}" height="{h}" fill="{DARK_BG}" rx="0"/>')
 
     # Accent stripe at top
-    o.append(f'<rect x="0" y="0" width="{w}" height="5" fill="{FREQ_PURPLE}"/>')
+    o.append(f'<rect x="0" y="0" width="{w}" height="6" fill="{FREQ_PURPLE}"/>')
 
-    # Title with word wrap
+    margin = 100
+
+    # Title with word wrap (large, readable on phone)
     words = title.split()
     lines = []
     cur = ""
     for word in words:
         test = (cur + " " + word).strip()
-        if len(test) > 24 and cur:
+        if len(test) > 20 and cur:
             lines.append(cur)
             cur = word
         else:
@@ -415,14 +420,21 @@ def generate_social_card(title, data, w=1080, h=1080):
     if cur:
         lines.append(cur)
 
-    ty = 140
+    ty = 160
     for i, line in enumerate(lines):
-        o.append(f'<text x="80" y="{ty + i * 56}" fill="{DARK_TEXT_PRIMARY}" font-family="{FONT_TITLE}" font-size="46" font-weight="700">{escape_xml(line)}</text>')
+        o.append(f'<text x="{margin}" y="{ty + i * 64}" fill="{DARK_TEXT_PRIMARY}" font-family="{FONT_TITLE}" font-size="52" font-weight="700">{escape_xml(line)}</text>')
 
-    # Stat block
-    stat_y = ty + len(lines) * 56 + 100
-    o.append(f'<text x="80" y="{stat_y}" fill="{FREQ_PURPLE}" font-family="{FONT_BODY}" font-size="80" font-weight="800">{escape_xml(stat_value)}</text>')
-    o.append(f'<text x="80" y="{stat_y + 50}" fill="{DARK_TEXT_SECONDARY}" font-family="{FONT_BODY}" font-size="20">{escape_xml(stat_label)}</text>')
+    # Stat block (big number + label, both phone-legible)
+    stat_y = ty + len(lines) * 64 + 80
+    o.append(f'<text x="{margin}" y="{stat_y}" fill="{FREQ_PURPLE}" font-family="{FONT_BODY}" font-size="96" font-weight="800">{escape_xml(stat_value)}</text>')
+    o.append(f'<text x="{margin}" y="{stat_y + 56}" fill="{DARK_TEXT_SECONDARY}" font-family="{FONT_BODY}" font-size="30">{escape_xml(stat_label)}</text>')
+
+    # Optional body text lines (for slides with more context)
+    if body_lines:
+        body_y = stat_y + 56 + 70
+        for bl in body_lines:
+            o.append(f'<text x="{margin}" y="{body_y}" fill="{DARK_TEXT_MUTED}" font-family="{FONT_BODY}" font-size="28">{escape_xml(bl)}</text>')
+            body_y += 40
 
     o.append("</svg>")
     return "\n".join(o)
