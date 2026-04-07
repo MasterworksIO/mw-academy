@@ -5,6 +5,13 @@
 # OS
 .DS_Store
 Thumbs.db
+Icon?
+
+# Google Drive sync artifacts
+*.gdoc
+*.gsheet
+*.gslides
+.tmp.driveupload/
 
 # Claude Code
 .claude/settings.local.json
