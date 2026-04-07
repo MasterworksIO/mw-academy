@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="65" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Christie's Regional Sales Growth, 2025</text>
+<text x="65" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Dollar weakness drew foreign capital into American auction rooms</text>
+<!-- Y-axis grid: -10 to 20 -->
+<line x1="65" y1="110" x2="1100" y2="110" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="114" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">20%</text>
+<line x1="65" y1="227" x2="1100" y2="227" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="231" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">10%</text>
+<line x1="65" y1="343" x2="1100" y2="343" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="347" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">0%</text>
+<line x1="65" y1="460" x2="1100" y2="460" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="464" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">-10%</text>
+<!-- Bars: Americas +15%, EMEA +2%, Asia -5% -->
+<!-- Chart area: x=65 to 1100, y: 20%=110, 0%=343, -10%=460. Per 1% = 11.65px -->
+<!-- Americas bar: center at x=248, width=200, top at y=168.25 (15% above zero) -->
+<text x="248" y="580" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" text-anchor="middle">Americas</text>
+<rect x="148" y="169" width="200" height="174" fill="#495DE5" rx="3"/>
+<text x="248" y="157" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">+15%</text>
+<!-- EMEA bar: center at x=583, width=200, top at y=320 (2% above zero) -->
+<text x="583" y="580" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" text-anchor="middle">EMEA</text>
+<rect x="483" y="320" width="200" height="23" fill="#9CA3AF" rx="3"/>
+<text x="583" y="308" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">+2%</text>
+<!-- Asia bar: center at x=918, width=200, top at y=343, bottom at y=401 (5% below zero) -->
+<text x="918" y="580" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" text-anchor="middle">Asia</text>
+<rect x="818" y="343" width="200" height="58" fill="#6B7280" rx="3"/>
+<text x="918" y="420" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">-5%</text>
+<!-- Zero line (darker) -->
+<line x1="65" y1="343" x2="1100" y2="343" stroke="#1A1A1A" stroke-width="1" opacity="0.3"/>
+<!-- Source -->
+<text x="65" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: The Art Newspaper, Dec 2025</text>
+</svg>

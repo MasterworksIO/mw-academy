@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="65" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Global Art Sales by Region, 2025</text>
+<text x="65" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Americas dominate, but the dollar's slide flattered USD-reported totals</text>
+<!-- Y-axis grid: 0% to 50% -->
+<line x1="65" y1="100" x2="1100" y2="100" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="104" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">50%</text>
+<line x1="65" y1="196" x2="1100" y2="196" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="200" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">40%</text>
+<line x1="65" y1="292" x2="1100" y2="292" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="296" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">30%</text>
+<line x1="65" y1="388" x2="1100" y2="388" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="392" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">20%</text>
+<line x1="65" y1="484" x2="1100" y2="484" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="488" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">10%</text>
+<line x1="65" y1="580" x2="1100" y2="580" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="584" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">0%</text>
+<!-- Bars: Americas 44%, UK 18%, China 14%, France 7%, Rest 17% -->
+<!-- Y mapping: 0%=580, 50%=100. Per 1% = 9.6px. Bar top = 580 - val*9.6 -->
+<!-- Americas: 44% -> top=158 height=422 -->
+<rect x="105" y="158" width="140" height="422" fill="#495DE5" rx="3"/>
+<text x="175" y="146" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">44%</text>
+<text x="175" y="610" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">Americas</text>
+<!-- UK: 18% -> top=407 height=173 -->
+<rect x="310" y="407" width="140" height="173" fill="#9CA3AF" rx="3"/>
+<text x="380" y="395" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">18%</text>
+<text x="380" y="610" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">UK</text>
+<!-- China: 14% -> top=446 height=134 -->
+<rect x="515" y="446" width="140" height="134" fill="#9CA3AF" rx="3"/>
+<text x="585" y="434" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">14%</text>
+<text x="585" y="610" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">China</text>
+<!-- France: 7% -> top=513 height=67 -->
+<rect x="720" y="513" width="140" height="67" fill="#6B7280" rx="3"/>
+<text x="790" y="501" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">7%</text>
+<text x="790" y="610" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">France</text>
+<!-- Rest of World: 17% -> top=417 height=163 -->
+<rect x="925" y="417" width="140" height="163" fill="#6B7280" rx="3"/>
+<text x="995" y="405" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">17%</text>
+<text x="995" y="610" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">Rest of World</text>
+<!-- Source -->
+<text x="65" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Art Basel/UBS Global Art Market Report 2026</text>
+</svg>

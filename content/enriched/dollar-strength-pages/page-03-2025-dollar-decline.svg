@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="72" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">02  THE 2025 DOLLAR DECLINE</text>
+
+  <!-- H3 subheading -->
+  <text x="72" y="120" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">The Steepest First-Half Slide Since 1973</text>
+
+  <!-- Body text -->
+  <text x="72" y="165" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">The DXY's fall from 109 to roughly 99 over the course of</tspan>
+    <tspan x="72" dy="25">2025 was driven by trade policy upheaval, tariff</tspan>
+    <tspan x="72" dy="25">uncertainty, and eroding confidence in US growth.</tspan>
+    <tspan x="72" dy="25">Morgan Stanley described it as the dollar's most</tspan>
+    <tspan x="72" dy="25">punishing run in over two decades. For the art market,</tspan>
+    <tspan x="72" dy="25">the timing mattered: the slide accelerated in early April,</tspan>
+    <tspan x="72" dy="25">just as the spring auction season was getting started.</tspan>
+  </text>
+
+  <!-- DXY Bar chart: visual of decline -->
+  <text x="72" y="380" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1a1a1a" letter-spacing="1px">DXY INDEX 2025</text>
+
+  <!-- Bar: January peak -->
+  <text x="72" y="420" font-family="DM Sans, sans-serif" font-size="13" fill="#444444">Jan 2025 Peak</text>
+  <rect x="220" y="407" width="460" height="22" rx="2" fill="#f7f5f1"/>
+  <rect x="220" y="407" width="460" height="22" rx="2" fill="#1a1a1a"/>
+  <text x="690" y="423" text-anchor="end" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#ffffff">109</text>
+
+  <!-- Bar: Year-end -->
+  <text x="72" y="462" font-family="DM Sans, sans-serif" font-size="13" fill="#444444">Year-End</text>
+  <rect x="220" y="449" width="460" height="22" rx="2" fill="#f7f5f1"/>
+  <rect x="220" y="449" width="418" height="22" rx="2" fill="#e8e4de"/>
+  <text x="646" y="465" text-anchor="end" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a">~99</text>
+
+  <!-- Decline label -->
+  <text x="72" y="500" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#495DE5" letter-spacing="1px">APPROX. 10% DECLINE</text>
+
+  <!-- Sales performance section -->
+  <text x="72" y="560" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">Auction House Performance</text>
+
+  <text x="72" y="600" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Christie's reported projected global sales of $6.2 billion</tspan>
+    <tspan x="72" dy="25">for 2025 (up 6% from 2024), while Sotheby's posted</tspan>
+    <tspan x="72" dy="25">$7 billion (up 17%). Those gains came from a mix of</tspan>
+    <tspan x="72" dy="25">trophy lots, a broader push into luxury goods, and,</tspan>
+    <tspan x="72" dy="25">critically, stronger international participation at a</tspan>
+    <tspan x="72" dy="25">moment when the dollar's weakness made US-based</tspan>
+    <tspan x="72" dy="25">purchases more attractive for overseas buyers.</tspan>
+  </text>
+
+  <!-- Regional bar chart -->
+  <text x="72" y="810" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1a1a1a" letter-spacing="1px">CHRISTIE'S REGIONAL SALES CHANGE</text>
+
+  <!-- Americas bar -->
+  <text x="72" y="848" font-family="DM Sans, sans-serif" font-size="13" fill="#444444">Americas</text>
+  <rect x="220" y="835" width="460" height="20" rx="2" fill="#f7f5f1"/>
+  <rect x="220" y="835" width="345" height="20" rx="2" fill="#1a1a1a"/>
+  <text x="572" y="850" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a">+15%</text>
+
+  <!-- EMEA bar -->
+  <text x="72" y="882" font-family="DM Sans, sans-serif" font-size="13" fill="#444444">EMEA</text>
+  <rect x="220" y="869" width="460" height="20" rx="2" fill="#f7f5f1"/>
+  <rect x="220" y="869" width="46" height="20" rx="2" fill="#e8e4de"/>
+  <text x="274" y="884" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1a1a1a">+2%</text>
+
+  <!-- Asia bar -->
+  <text x="72" y="916" font-family="DM Sans, sans-serif" font-size="13" fill="#444444">Asia</text>
+  <rect x="220" y="903" width="460" height="20" rx="2" fill="#f7f5f1"/>
+  <rect x="220" y="903" width="0" height="20" rx="2" fill="#e8e4de"/>
+  <text x="228" y="918" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#cc4444">-5%</text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="950" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="#cccccc">03</text>
+</svg>

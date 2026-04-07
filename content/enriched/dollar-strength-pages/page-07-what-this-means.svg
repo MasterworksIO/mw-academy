@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="72" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">06  WHAT THIS MEANS FOR ART INVESTORS</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="130" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">For anyone holding art as a financial asset, currency is a</tspan>
+    <tspan x="72" dy="25">risk factor that often goes unpriced. Most art market</tspan>
+    <tspan x="72" dy="25">indices and return calculations are reported in US</tspan>
+    <tspan x="72" dy="25">dollars, which means they embed dollar movements</tspan>
+    <tspan x="72" dy="25">without flagging them.</tspan>
+  </text>
+
+  <!-- Pull quote block -->
+  <rect x="72" y="290" width="2" height="90" fill="#1a1a1a"/>
+  <text x="112" y="320" font-family="Cormorant Garamond, serif" font-size="26" font-style="italic" fill="#1a1a1a">
+    <tspan x="112" dy="0">An art portfolio that returned 8% in a</tspan>
+    <tspan x="112" dy="36">year when the dollar fell 10% actually</tspan>
+    <tspan x="112" dy="36">lost ground for a euro-based investor.</tspan>
+  </text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="470" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Masterworks and other platforms that structure art</tspan>
+    <tspan x="72" dy="25">investments for US-based buyers denominate returns in</tspan>
+    <tspan x="72" dy="25">dollars, which simplifies the currency question for</tspan>
+    <tspan x="72" dy="25">domestic investors. But the underlying art still trades in</tspan>
+    <tspan x="72" dy="25">a global market. A work bought at auction in London</tspan>
+    <tspan x="72" dy="25">and later sold in New York carries implicit currency</tspan>
+    <tspan x="72" dy="25">exposure.</tspan>
+  </text>
+
+  <!-- H3 subheading -->
+  <text x="72" y="680" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">The Practical Response</text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="720" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Institutional investors in traditional asset classes</tspan>
+    <tspan x="72" dy="25">routinely hedge currency exposure with forwards and</tspan>
+    <tspan x="72" dy="25">options. That toolkit is less available in art, where</tspan>
+    <tspan x="72" dy="25">holding periods are uncertain and the asset itself is</tspan>
+    <tspan x="72" dy="25">illiquid. The practical response for most art investors is</tspan>
+    <tspan x="72" dy="25">awareness: know which currency your art is priced in,</tspan>
+    <tspan x="72" dy="25">track the major pairs, and recognize that a strong year</tspan>
+    <tspan x="72" dy="25">in headline returns may partly reflect a favorable</tspan>
+    <tspan x="72" dy="25">currency move rather than genuine price growth for</tspan>
+    <tspan x="72" dy="25">the work itself.</tspan>
+  </text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="950" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="#cccccc">07</text>
+</svg>

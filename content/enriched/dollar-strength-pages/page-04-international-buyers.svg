@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="72" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">03  HOW INTERNATIONAL BUYERS RESPOND</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="130" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">When the dollar weakens, overseas collectors see a</tspan>
+    <tspan x="72" dy="25">window. MyArtBroker has noted that dollar strength</tspan>
+    <tspan x="72" dy="25">versus the euro and sterling creates effective purchasing</tspan>
+    <tspan x="72" dy="25">gaps of 12% to 18% for collectors willing to cross</tspan>
+    <tspan x="72" dy="25">borders. A Brexit-era precedent set the template: when</tspan>
+    <tspan x="72" dy="25">sterling crashed in 2016, US collectors flooded London</tspan>
+    <tspan x="72" dy="25">sales rooms to snap up works at a currency discount.</tspan>
+  </text>
+
+  <!-- Pull quote block -->
+  <rect x="72" y="340" width="2" height="100" fill="#1a1a1a"/>
+  <text x="112" y="370" font-family="Cormorant Garamond, serif" font-size="26" font-style="italic" fill="#1a1a1a">
+    <tspan x="112" dy="0">Dollar strength versus the euro and</tspan>
+    <tspan x="112" dy="36">sterling creates effective purchasing</tspan>
+    <tspan x="112" dy="36">gaps of 12% to 18%.</tspan>
+  </text>
+  <text x="112" y="478" font-family="Inter, sans-serif" font-size="10" font-weight="600" letter-spacing="4px" fill="#888888">MYARTBROKER</text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="540" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">In 2025, the roles reversed. European buyers increased</tspan>
+    <tspan x="72" dy="25">their participation in American auctions, while regional</tspan>
+    <tspan x="72" dy="25">activity in their home markets softened.</tspan>
+  </text>
+
+  <!-- H3 subheading -->
+  <text x="72" y="650" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">Asian Market Dynamics</text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="690" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Mainland Chinese buyers accounted for half of total</tspan>
+    <tspan x="72" dy="25">sales at Hong Kong's autumn evening sales. The Hong</tspan>
+    <tspan x="72" dy="25">Kong dollar's peg to the US dollar meant that as the</tspan>
+    <tspan x="72" dy="25">greenback weakened, HKD-priced lots became cheaper</tspan>
+    <tspan x="72" dy="25">for buyers holding euros, yen, or won.</tspan>
+  </text>
+
+  <!-- Stat card: HK sale -->
+  <rect x="72" y="835" width="672" height="90" rx="4" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="92" y="875" font-family="Inter, sans-serif" font-size="36" font-weight="800" fill="#1a1a1a">HK$565.6M</text>
+  <text x="380" y="868" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1a1a1a" letter-spacing="1px">CHRISTIE'S HK AUTUMN SALE</text>
+  <text x="380" y="890" font-family="DM Sans, sans-serif" font-size="13" fill="#777777">Anchored by a Picasso that set an Asia auction record</text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="950" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="#cccccc">04</text>
+</svg>

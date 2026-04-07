@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="30" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">Currency Impact on a $10M New York Purchase</text>
+<text x="30" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">Effective cost in local currency when the dollar falls 10%</text>
+<!-- Horizontal bars -->
+<!-- Chart area: labels at x=30-200, bars from x=210 to x=1120. Max value $10M = 910px width -->
+<!-- Item 1: USD (base price) $10M -->
+<text x="196" y="130" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">USD (base price)</text>
+<rect x="210" y="112" width="910" height="36" fill="#495DE5" rx="4"/>
+<text x="1132" y="135" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$10.0M</text>
+<!-- Item 2: EUR buyer (dollar -10%) $9.0M -->
+<text x="196" y="210" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">EUR buyer (dollar -10%)</text>
+<rect x="210" y="192" width="819" height="36" fill="#24CB71" rx="4"/>
+<text x="1041" y="215" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$9.0M</text>
+<!-- Savings callout -->
+<text x="1041" y="237" fill="#24CB71" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="600">saves $1.0M</text>
+<!-- Item 3: GBP buyer (dollar -10%) $9.1M -->
+<text x="196" y="300" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">GBP buyer (dollar -10%)</text>
+<rect x="210" y="282" width="828" height="36" fill="#24CB71" rx="4"/>
+<text x="1050" y="305" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$9.1M</text>
+<text x="1050" y="327" fill="#24CB71" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="600">saves $900K</text>
+<!-- Item 4: JPY buyer (dollar -10%) $9.2M -->
+<text x="196" y="390" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">JPY buyer (dollar -10%)</text>
+<rect x="210" y="372" width="837" height="36" fill="#9CA3AF" rx="4"/>
+<text x="1059" y="395" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$9.2M</text>
+<text x="1059" y="417" fill="#9CA3AF" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="600">saves $800K</text>
+<!-- Item 5: HKD buyer (pegged) $10M -->
+<text x="196" y="480" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" text-anchor="end">HKD buyer (pegged to USD)</text>
+<rect x="210" y="462" width="910" height="36" fill="#9CA3AF" rx="4"/>
+<text x="1132" y="485" fill="#1A1A1A" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">$10.0M</text>
+<text x="1132" y="507" fill="#6B7280" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" font-weight="600">no savings (pegged)</text>
+<!-- Annotation -->
+<text x="210" y="570" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-style="italic">A 10% dollar decline saves European collectors roughly $1M on a $10M lot, before fees and premiums.</text>
+<!-- Source -->
+<text x="30" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Illustrative example based on 2025 FX moves</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+<rect width="1080" height="1080" fill="#ffffff"/>
+<!-- Thin rule at top -->
+<rect x="90" y="80" width="60" height="2" fill="#1a1a1a"/>
+<!-- Title in Cormorant Garamond italic -->
+<text x="90" y="170" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">Dollar Strength and</text>
+<text x="90" y="228" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">Art Prices: Why</text>
+<text x="90" y="286" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">Currency Matters</text>
+<text x="90" y="344" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">at Auction</text>
+<!-- Stat card -->
+<rect x="90" y="404" width="900" height="240" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1" rx="0"/>
+<text x="130" y="484" fill="#1a1a1a" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="72" font-weight="800">~10%</text>
+<text x="130" y="524" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">DXY decline in 2025, the steepest</text>
+<text x="130" y="554" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">first-half drop since 1973</text>
+<!-- Body text -->
+<text x="90" y="710" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">Exchange rates can shift art returns by 10%+</text>
+<text x="90" y="744" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">in a single year, making currency as important</text>
+<text x="90" y="778" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">as the hammer price itself.</text>
+<!-- Swipe CTA -->
+<text x="940" y="950" fill="#495DE5" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" text-anchor="end">Swipe --></text>
+<!-- Footer -->
+<text x="540" y="1030" fill="#888888" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="5" text-anchor="middle">MASTERWORKS ACADEMY</text>
+</svg>

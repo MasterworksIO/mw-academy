@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <!-- Dark background page -->
+  <rect width="816" height="1056" fill="#0f0f0f"/>
+
+  <!-- Section label -->
+  <text x="72" y="72" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="rgba(255,255,255,0.5)">04  MULTI-CURRENCY PRICING</text>
+
+  <!-- Title -->
+  <text x="72" y="140" font-family="Cormorant Garamond, serif" font-size="42" font-weight="400" font-style="italic" fill="#ffffff">The Arbitrage Angles</text>
+
+  <!-- Body text -->
+  <text x="72" y="210" font-family="DM Sans, sans-serif" font-size="14.5" fill="rgba(255,255,255,0.75)">
+    <tspan x="72" dy="0">Major auction houses quote pre-sale estimates in</tspan>
+    <tspan x="72" dy="25">multiple currencies. But the conversion rates published</tspan>
+    <tspan x="72" dy="25">in sale catalogues are set at the time of printing, often</tspan>
+    <tspan x="72" dy="25">weeks before the auction. Exchange rates can move</tspan>
+    <tspan x="72" dy="25">meaningfully in that window.</tspan>
+  </text>
+
+  <!-- Stat cards on dark background -->
+  <!-- Card 1 -->
+  <rect x="72" y="370" width="320" height="160" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="92" y="420" font-family="Inter, sans-serif" font-size="36" font-weight="800" fill="#ffffff">$150K</text>
+  <text x="92" y="448" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1px">CURRENCY SWING IMPACT</text>
+  <text x="92" y="474" font-family="DM Sans, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">
+    <tspan x="92" dy="0">A 3% currency move on a</tspan>
+    <tspan x="92" dy="18">$5 million purchase</tspan>
+  </text>
+
+  <!-- Card 2 -->
+  <rect x="424" y="370" width="320" height="160" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="444" y="420" font-family="Inter, sans-serif" font-size="36" font-weight="800" fill="#ffffff">12-18%</text>
+  <text x="444" y="448" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1px">PURCHASING GAP</text>
+  <text x="444" y="474" font-family="DM Sans, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">
+    <tspan x="444" dy="0">Effective discount for cross-border</tspan>
+    <tspan x="444" dy="18">collectors during currency swings</tspan>
+  </text>
+
+  <!-- Body text continued -->
+  <text x="72" y="600" font-family="DM Sans, sans-serif" font-size="14.5" fill="rgba(255,255,255,0.75)">
+    <tspan x="72" dy="0">This gap creates a form of soft arbitrage. Sophisticated</tspan>
+    <tspan x="72" dy="25">collectors and advisors track real-time exchange rates</tspan>
+    <tspan x="72" dy="25">alongside lot estimates, sometimes shifting their</tspan>
+    <tspan x="72" dy="25">bidding from New York to London (or vice versa) based</tspan>
+    <tspan x="72" dy="25">on which currency offers better value that week.</tspan>
+  </text>
+
+  <text x="72" y="760" font-family="DM Sans, sans-serif" font-size="14.5" fill="rgba(255,255,255,0.75)">
+    <tspan x="72" dy="0">The arbitrage is not risk-free. Transaction costs, buyer's</tspan>
+    <tspan x="72" dy="25">premiums, shipping, insurance, and potential import</tspan>
+    <tspan x="72" dy="25">duties all eat into the currency gain. And for works</tspan>
+    <tspan x="72" dy="25">bought at auction with the intent to hold for years, the</tspan>
+    <tspan x="72" dy="25">currency advantage at purchase may reverse by the</tspan>
+    <tspan x="72" dy="25">time of sale. Still, for active collectors operating across</tspan>
+    <tspan x="72" dy="25">borders, exchange rates are a real input into strategy.</tspan>
+  </text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="950" width="672" height="1" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="rgba(255,255,255,0.3)">05</text>
+</svg>

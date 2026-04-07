@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="72" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">THE BOTTOM LINE</text>
+
+  <!-- Takeaway 1 -->
+  <rect x="72" y="105" width="4" height="4" rx="2" fill="#1a1a1a"/>
+  <text x="92" y="109" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="92" dy="0">The US dollar's 10% decline in 2025, its steepest drop</tspan>
+    <tspan x="92" dy="25">since 1973, reshaped who bid at auction and where,</tspan>
+    <tspan x="92" dy="25">drawing foreign capital into New York while cooling</tspan>
+    <tspan x="92" dy="25">American appetite for overseas sales.</tspan>
+  </text>
+
+  <!-- Takeaway 2 -->
+  <rect x="72" y="225" width="4" height="4" rx="2" fill="#1a1a1a"/>
+  <text x="92" y="229" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="92" dy="0">Currency moves of 10% to 15% can swing the effective</tspan>
+    <tspan x="92" dy="25">cost of a major artwork by hundreds of thousands of</tspan>
+    <tspan x="92" dy="25">dollars, making exchange rates as important as</tspan>
+    <tspan x="92" dy="25">condition reports or provenance in cross-border deals.</tspan>
+  </text>
+
+  <!-- Takeaway 3 -->
+  <rect x="72" y="345" width="4" height="4" rx="2" fill="#1a1a1a"/>
+  <text x="92" y="349" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="92" dy="0">Global art sales reached $59.6 billion in 2025, but that</tspan>
+    <tspan x="92" dy="25">dollar-denominated figure overstates growth in</tspan>
+    <tspan x="92" dy="25">local-currency terms for many markets outside the US.</tspan>
+  </text>
+
+  <!-- Takeaway 4 -->
+  <rect x="72" y="445" width="4" height="4" rx="2" fill="#1a1a1a"/>
+  <text x="92" y="449" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="92" dy="0">Auction houses price works in multiple currencies, but</tspan>
+    <tspan x="92" dy="25">catalogue estimates are set weeks before sale day,</tspan>
+    <tspan x="92" dy="25">creating gaps that informed buyers exploit.</tspan>
+  </text>
+
+  <!-- Takeaway 5 -->
+  <rect x="72" y="535" width="4" height="4" rx="2" fill="#1a1a1a"/>
+  <text x="92" y="539" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="92" dy="0">Art investors should treat currency as a real risk factor:</tspan>
+    <tspan x="92" dy="25">most return figures are reported in US dollars and</tspan>
+    <tspan x="92" dy="25">embed exchange-rate effects without disclosing them.</tspan>
+  </text>
+
+  <!-- Divider -->
+  <rect x="72" y="620" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- FAQ section -->
+  <text x="72" y="660" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">FREQUENTLY ASKED QUESTIONS</text>
+
+  <!-- FAQ 1 -->
+  <text x="72" y="700" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#1a1a1a">Does a weak dollar make art cheaper for foreign buyers?</text>
+  <text x="72" y="722" font-family="DM Sans, sans-serif" font-size="12.5" fill="#444444">
+    <tspan x="72" dy="0">Yes. A 10% drop in the dollar means a European collector</tspan>
+    <tspan x="72" dy="20">effectively gets a 10% discount on a New York purchase,</tspan>
+    <tspan x="72" dy="20">before fees.</tspan>
+  </text>
+
+  <!-- FAQ 2 -->
+  <text x="72" y="790" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#1a1a1a">Can currency movements affect art investment returns?</text>
+  <text x="72" y="812" font-family="DM Sans, sans-serif" font-size="12.5" fill="#444444">
+    <tspan x="72" dy="0">Absolutely. A US investor who buys in London and sells in</tspan>
+    <tspan x="72" dy="20">New York carries implicit GBP/USD exposure. If the dollar</tspan>
+    <tspan x="72" dy="20">strengthens, the return gets a lift beyond any change in the</tspan>
+    <tspan x="72" dy="20">work's sterling price.</tspan>
+  </text>
+
+  <!-- FAQ 3 -->
+  <text x="72" y="895" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#1a1a1a">Should art investors hedge currency risk?</text>
+  <text x="72" y="917" font-family="DM Sans, sans-serif" font-size="12.5" fill="#444444">
+    <tspan x="72" dy="0">Traditional hedging tools are difficult to apply to art due to</tspan>
+    <tspan x="72" dy="20">uncertain holding periods and illiquidity. Most investors</tspan>
+    <tspan x="72" dy="20">manage currency risk through awareness and timing.</tspan>
+  </text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="#cccccc">08</text>
+</svg>

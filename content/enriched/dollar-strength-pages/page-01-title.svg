@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Logo placeholder: MASTERWORKS text -->
+  <text x="408" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="400" letter-spacing="14px" fill="#1a1a1a">MASTERWORKS</text>
+
+  <!-- Section label -->
+  <text x="408" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888" text-transform="uppercase">MASTERWORKS ACADEMY</text>
+
+  <!-- Title line 1: Inter bold caps -->
+  <text x="408" y="390" text-anchor="middle" font-family="Inter, sans-serif" font-size="38" font-weight="800" fill="#1a1a1a" letter-spacing="1px">DOLLAR STRENGTH</text>
+
+  <!-- Title line 2: Cormorant italic -->
+  <text x="408" y="445" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="42" font-weight="400" font-style="italic" fill="#1a1a1a">and Art Prices</text>
+
+  <!-- Subtitle -->
+  <text x="408" y="495" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#777777" letter-spacing="0.5px">Why Currency Matters at Auction</text>
+
+  <!-- Thin rule -->
+  <rect x="378" y="530" width="60" height="1" fill="#1a1a1a"/>
+
+  <!-- Lead paragraph: Cormorant Garamond 22px -->
+  <text x="72" y="600" font-family="Cormorant Garamond, serif" font-size="22" fill="#1a1a1a" font-style="normal">
+    <tspan x="72" dy="0">The strength of the US dollar directly affects</tspan>
+    <tspan x="72" dy="36">what art costs at auction, who bids on it, and</tspan>
+    <tspan x="72" dy="36">where it sells. For investors who treat art as a</tspan>
+    <tspan x="72" dy="36">portfolio asset, currency moves can shift</tspan>
+    <tspan x="72" dy="36">effective returns by 10% or more in a single</tspan>
+    <tspan x="72" dy="36">year, making the exchange rate as important</tspan>
+    <tspan x="72" dy="36">as the hammer price itself.</tspan>
+  </text>
+
+  <!-- Accent line bottom -->
+  <rect x="72" y="920" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Bottom URL -->
+  <text x="408" y="960" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">MASTERWORKS.COM/ACADEMY</text>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="#cccccc">01</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+<rect width="1080" height="1080" fill="#ffffff"/>
+<!-- Thin rule at top -->
+<rect x="90" y="80" width="60" height="2" fill="#1a1a1a"/>
+<!-- Title -->
+<text x="90" y="180" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">Currency Risk Is</text>
+<text x="90" y="238" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">a Real Factor in</text>
+<text x="90" y="296" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">Art Investing</text>
+<!-- Body text -->
+<text x="90" y="400" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">Most art market indices report in US dollars,</text>
+<text x="90" y="434" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">embedding exchange-rate effects without</text>
+<text x="90" y="468" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">disclosing them.</text>
+<text x="90" y="534" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">An art portfolio that returned 8% in a year</text>
+<text x="90" y="568" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">when the dollar fell 10% actually lost ground</text>
+<text x="90" y="602" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">for a euro-based investor.</text>
+<!-- CTA card -->
+<rect x="90" y="670" width="900" height="160" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1" rx="0"/>
+<text x="130" y="730" fill="#1a1a1a" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Read the full analysis</text>
+<text x="130" y="765" fill="#495DE5" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="600">masterworks.com/academy</text>
+<!-- Disclosure -->
+<text x="90" y="900" fill="#999999" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14">See important Reg A disclosures at masterworks.com/cd</text>
+<!-- Footer -->
+<text x="540" y="1030" fill="#888888" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="5" text-anchor="middle">MASTERWORKS ACADEMY</text>
+</svg>

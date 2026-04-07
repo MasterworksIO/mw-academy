@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+<rect width="1080" height="1080" fill="#ffffff"/>
+<!-- Thin rule at top -->
+<rect x="90" y="80" width="60" height="2" fill="#1a1a1a"/>
+<!-- Title -->
+<text x="90" y="170" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">The Hidden Currency</text>
+<text x="90" y="228" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">in Art Returns</text>
+<!-- Stat card -->
+<rect x="90" y="290" width="900" height="240" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1" rx="0"/>
+<text x="130" y="380" fill="#1a1a1a" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="72" font-weight="800">$59.6B</text>
+<text x="130" y="420" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">Global art sales in 2025, up 4% year over</text>
+<text x="130" y="450" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">year, reported in US dollars</text>
+<!-- Body text -->
+<text x="90" y="600" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">That dollar-denominated headline overstates</text>
+<text x="90" y="634" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">growth for many markets outside the US.</text>
+<text x="90" y="700" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">Markets that grew modestly in local currency</text>
+<text x="90" y="734" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">looked stronger when converted back to a</text>
+<text x="90" y="768" fill="#777777" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">weakened dollar, flattering the global total.</text>
+<!-- Swipe CTA -->
+<text x="940" y="950" fill="#495DE5" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" text-anchor="end">Swipe --></text>
+<!-- Footer -->
+<text x="540" y="1030" fill="#888888" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="5" text-anchor="middle">MASTERWORKS ACADEMY</text>
+</svg>

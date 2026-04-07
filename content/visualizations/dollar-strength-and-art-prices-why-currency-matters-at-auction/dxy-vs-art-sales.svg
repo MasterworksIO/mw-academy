@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+<rect width="1200" height="680" fill="#F7F7F8" rx="12"/>
+<text x="65" y="38" fill="#1A1A1A" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="22" font-weight="700">DXY Dollar Index vs Global Art Sales (2018-2025)</text>
+<text x="65" y="60" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">A weaker dollar coincided with stronger global art market totals</text>
+<!-- Y-axis grid lines and labels (left axis: DXY 40-120, right axis: Sales $B) -->
+<line x1="65" y1="90" x2="1060" y2="90" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="94" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">120</text>
+<line x1="65" y1="190" x2="1060" y2="190" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="194" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">100</text>
+<line x1="65" y1="290" x2="1060" y2="290" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="294" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">80</text>
+<line x1="65" y1="390" x2="1060" y2="390" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="394" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">60</text>
+<line x1="65" y1="490" x2="1060" y2="490" stroke="#E5E5E7" stroke-width="0.75"/>
+<text x="53" y="494" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="end">40</text>
+<!-- Right axis labels ($B) -->
+<text x="1072" y="94" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="start">$80B</text>
+<text x="1072" y="194" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="start">$67B</text>
+<text x="1072" y="294" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="start">$53B</text>
+<text x="1072" y="394" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="start">$40B</text>
+<text x="1072" y="494" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="start">$27B</text>
+<!-- X-axis labels -->
+<text x="65" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2018</text>
+<text x="207" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2019</text>
+<text x="349" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2020</text>
+<text x="491" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2021</text>
+<text x="634" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2022</text>
+<text x="776" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2023</text>
+<text x="918" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2024</text>
+<text x="1060" y="538" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle">2025</text>
+<!-- Area fill for DXY (primary) -->
+<path d="M 65 510 L 65 240 L 207 230 L 349 290 L 491 240 L 634 150 L 776 170 L 918 110 L 1060 190 L 1060 510 Z" fill="#495DE5" opacity="0.06"/>
+<!-- DXY Line (primary purple) -->
+<!-- DXY values: 96->y240, 97->y230, 90->y290, 96->y240, 104->y150, 102->y170, 108->y110, 99->y190 -->
+<!-- Y mapping: 120=90, 40=490. Per unit = (490-90)/80 = 5px. y = 490 - (val-40)*5 -->
+<path d="M 65 210 L 207 205 L 349 240 L 491 210 L 634 170 L 776 180 L 918 150 L 1060 195" fill="none" stroke="#495DE5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1060" cy="195" r="4" fill="#495DE5"/>
+<text x="1072" y="193" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">DXY (99)</text>
+<!-- Art Sales Line (gray) -->
+<!-- Sales values: 67->y155, 64->y170, 50->y240, 65->y165, 68->y150, 65->y165, 57->y205, 60->y190 -->
+<!-- Right axis mapping: $80B=90, $27B=490. Per $1B = (490-90)/53 = 7.55px. y = 490 - (val-27)*7.55 -->
+<path d="M 65 188 L 207 210 L 349 316 L 491 203 L 634 180 L 776 203 L 918 263 L 1060 241" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1060" cy="241" r="4" fill="#9CA3AF"/>
+<text x="1072" y="255" fill="#9CA3AF" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Art Sales ($60B)</text>
+<!-- Legend -->
+<rect x="800" y="62" width="14" height="14" fill="#495DE5" rx="3"/>
+<text x="820" y="74" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">DXY Dollar Index (left axis)</text>
+<rect x="800" y="82" width="14" height="14" fill="#9CA3AF" rx="3"/>
+<text x="820" y="94" fill="#6B6B6B" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">Global Art Sales, $B (right axis)</text>
+<!-- Source -->
+<text x="65" y="662" fill="#999999" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" opacity="0.65">Source: Art Basel/UBS Global Art Market Report 2026, Federal Reserve</text>
+</svg>

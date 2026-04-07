@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="72" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">01  HOW THE DOLLAR MOVES ART PRICES</text>
+
+  <!-- Body text -->
+  <text x="72" y="130" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444" line-height="25">
+    <tspan x="72" dy="0">Art is a global market priced mostly in three currencies:</tspan>
+    <tspan x="72" dy="25">US dollars in New York, pounds sterling in London, and</tspan>
+    <tspan x="72" dy="25">Hong Kong dollars (pegged to the USD) in Asia. When the</tspan>
+    <tspan x="72" dy="25">dollar strengthens, a $10 million painting in New York</tspan>
+    <tspan x="72" dy="25">costs a European buyer more in euro terms, even if the</tspan>
+    <tspan x="72" dy="25">dollar price stays flat.</tspan>
+  </text>
+
+  <text x="72" y="310" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">A 10% rise in the dollar against the euro adds roughly</tspan>
+    <tspan x="72" dy="25">$1 million in effective cost for a European collector</tspan>
+    <tspan x="72" dy="25">buying a $10 million work, with no change in the</tspan>
+    <tspan x="72" dy="25">auction estimate. The math works both ways. A weaker</tspan>
+    <tspan x="72" dy="25">dollar makes American auction rooms cheaper for</tspan>
+    <tspan x="72" dy="25">foreign buyers and makes London and European sales</tspan>
+    <tspan x="72" dy="25">relatively more expensive for Americans.</tspan>
+  </text>
+
+  <!-- Stat cards row -->
+  <!-- Card 1: Global art sales -->
+  <rect x="72" y="520" width="320" height="150" rx="4" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="92" y="570" font-family="Inter, sans-serif" font-size="36" font-weight="800" fill="#1a1a1a">$59.6B</text>
+  <text x="92" y="596" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1a1a1a" letter-spacing="1px">GLOBAL ART SALES 2025</text>
+  <text x="92" y="620" font-family="DM Sans, sans-serif" font-size="13" fill="#777777">
+    <tspan x="92" dy="0">Up 4% year over year, per the Art Basel</tspan>
+    <tspan x="92" dy="18">and UBS Global Art Market Report 2026</tspan>
+  </text>
+
+  <!-- Card 2: Three currencies -->
+  <rect x="424" y="520" width="320" height="150" rx="4" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="444" y="570" font-family="Inter, sans-serif" font-size="36" font-weight="800" fill="#1a1a1a">3</text>
+  <text x="444" y="596" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1a1a1a" letter-spacing="1px">PRIMARY CURRENCIES</text>
+  <text x="444" y="620" font-family="DM Sans, sans-serif" font-size="13" fill="#777777">
+    <tspan x="444" dy="0">USD, GBP, and HKD dominate</tspan>
+    <tspan x="444" dy="18">global auction pricing</tspan>
+  </text>
+
+  <!-- Additional body text -->
+  <text x="72" y="730" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">This is not a minor accounting detail. Art returns are</tspan>
+    <tspan x="72" dy="25">always realized in a currency. An American investor who</tspan>
+    <tspan x="72" dy="25">bought a painting in London in early 2025 and sold it at</tspan>
+    <tspan x="72" dy="25">the same sterling price twelve months later would have</tspan>
+    <tspan x="72" dy="25">earned a return in dollar terms purely from the pound's</tspan>
+    <tspan x="72" dy="25">gain against the greenback. Currency was the return.</tspan>
+  </text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="940" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="#cccccc">02</text>
+</svg>

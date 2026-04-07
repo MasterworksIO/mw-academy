@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="1056" viewBox="0 0 816 1056">
+  <rect width="816" height="1056" fill="#ffffff"/>
+
+  <!-- Section label -->
+  <text x="72" y="72" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="5px" fill="#888888">05  TARIFFS AND THE 2025 DISRUPTION</text>
+
+  <!-- Body text block 1 -->
+  <text x="72" y="130" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">The April 2025 tariff announcements added a second</tspan>
+    <tspan x="72" dy="25">layer of complexity. While original artworks were</tspan>
+    <tspan x="72" dy="25">officially exempt from the new reciprocal tariffs (a White</tspan>
+    <tspan x="72" dy="25">House fact sheet confirmed that artworks, photographs,</tspan>
+    <tspan x="72" dy="25">and posters were excluded), the broader trade war</tspan>
+    <tspan x="72" dy="25">rattled confidence and hammered the dollar</tspan>
+    <tspan x="72" dy="25">simultaneously.</tspan>
+  </text>
+
+  <!-- Stat card: gallery impact -->
+  <rect x="72" y="350" width="672" height="120" rx="4" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1"/>
+  <text x="92" y="405" font-family="Inter, sans-serif" font-size="36" font-weight="800" fill="#1a1a1a">56%</text>
+  <text x="92" y="435" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1a1a1a" letter-spacing="1px">OF GALLERIES AFFECTED</text>
+  <text x="400" y="400" font-family="DM Sans, sans-serif" font-size="13" fill="#777777">
+    <tspan x="400" dy="0">Impacted by international tariffs and</tspan>
+    <tspan x="400" dy="18">shipping costs, per the Art Basel report.</tspan>
+    <tspan x="400" dy="18">Market shifting toward domestic trading.</tspan>
+  </text>
+
+  <!-- Body text block 2 -->
+  <text x="72" y="530" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">Collectors cancelled US-bound purchases, galleries</tspan>
+    <tspan x="72" dy="25">postponed American projects, and auction houses</tspan>
+    <tspan x="72" dy="25">reshuffled sales calendars. The uncertainty was as</tspan>
+    <tspan x="72" dy="25">damaging as any actual tariff. Even with the art</tspan>
+    <tspan x="72" dy="25">exemption, buyers worried about customs enforcement,</tspan>
+    <tspan x="72" dy="25">classification disputes, and future policy changes.</tspan>
+  </text>
+
+  <!-- H3 subheading -->
+  <text x="72" y="720" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">The Paradox</text>
+
+  <!-- Body text block 3 -->
+  <text x="72" y="760" font-family="DM Sans, sans-serif" font-size="14.5" fill="#444444">
+    <tspan x="72" dy="0">The dollar's tariff-driven fall had a paradoxical effect</tspan>
+    <tspan x="72" dy="25">on the auction market. It made US sales cheaper for</tspan>
+    <tspan x="72" dy="25">foreign buyers, but the policy chaos deterred some of</tspan>
+    <tspan x="72" dy="25">those same buyers from participating. Currency</tspan>
+    <tspan x="72" dy="25">weakness invited foreign capital in theory; trade</tspan>
+    <tspan x="72" dy="25">uncertainty pushed it away in practice.</tspan>
+  </text>
+
+  <!-- Thin rule -->
+  <rect x="72" y="950" width="672" height="1" fill="#e8e4de"/>
+
+  <!-- Page number -->
+  <text x="744" y="1020" text-anchor="end" font-family="Inter, sans-serif" font-size="9" letter-spacing="3px" fill="#cccccc">06</text>
+</svg>
