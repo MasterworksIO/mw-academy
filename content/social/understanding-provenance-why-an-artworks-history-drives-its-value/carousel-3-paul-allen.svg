@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
-<rect width="1080" height="1080" fill="#131217" rx="0"/>
-<rect x="0" y="0" width="1080" height="6" fill="#495DE5"/>
-<text x="100" y="200" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">The Celebrity</text>
-<text x="100" y="264" fill="#FFFFFF" font-family="Tiempos Headline, Georgia, Times New Roman, serif" font-size="52" font-weight="700">Provenance Effect</text>
-<text x="100" y="440" fill="#495DE5" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="96" font-weight="800">$1.5B</text>
-<text x="100" y="496" fill="#E8E8E8" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30">Paul Allen collection, Christie's 2022</text>
-<text x="100" y="600" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">Highest-grossing single-owner</text>
-<text x="100" y="640" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">auction in history.</text>
-<text x="100" y="720" fill="#888899" font-family="Neue Haas Grotesk, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28">Every single lot sold.</text>
+<rect width="1080" height="1080" fill="#ffffff"/>
+<rect x="90" y="80" width="60" height="2" fill="#1a1a1a"/>
+<text x="90" y="160" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">The Paul Allen</text>
+<text x="90" y="218" fill="#1a1a1a" font-family="Cormorant Garamond, Georgia, Times New Roman, serif" font-size="46" font-style="italic" font-weight="400">Collection</text>
+<rect x="90" y="326" width="900" height="240" fill="#f7f5f1" stroke="#e8e4de" stroke-width="1" rx="0"/>
+<text x="130" y="406" fill="#1a1a1a" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="72" font-weight="800">$1.5B</text>
+<text x="130" y="446" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">across 60 lots at Christie's, 100%</text>
+<text x="130" y="474" fill="#444444" font-family="DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22">sell-through, November 2022</text>
+<text x="540.0" y="1030" fill="#888888" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="5" text-anchor="middle">MASTERWORKS ACADEMY</text>
 </svg>

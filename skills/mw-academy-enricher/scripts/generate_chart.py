@@ -393,26 +393,39 @@ def generate_comparison_table(data, title, w, h, source, subtitle, theme):
 def generate_social_card(title, data, w=1080, h=1080):
     stat_value = data.get("stat_value", "")
     stat_label = data.get("stat_label", "")
-
-    # Body text from data (optional extra lines below the stat)
     body_lines = data.get("body", [])
+
+    # Investor book design system fonts
+    f_display = "Cormorant Garamond, Georgia, Times New Roman, serif"
+    f_sans = "Inter, Helvetica Neue, Helvetica, Arial, sans-serif"
+    f_body = "DM Sans, Helvetica Neue, Helvetica, Arial, sans-serif"
+
+    # Investor book colors
+    bg = "#ffffff"
+    off_white = "#f7f5f1"
+    warm_gray = "#e8e4de"
+    text_primary = "#1a1a1a"
+    text_body = "#444444"
+    text_muted = "#777777"
+    mid_gray = "#888888"
+    accent = "#495DE5"
+
+    margin = 90
 
     o = []
     o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
-    o.append(f'<rect width="{w}" height="{h}" fill="{DARK_BG}" rx="0"/>')
+    o.append(f'<rect width="{w}" height="{h}" fill="{bg}"/>')
 
-    # Accent stripe at top
-    o.append(f'<rect x="0" y="0" width="{w}" height="6" fill="{FREQ_PURPLE}"/>')
+    # Thin rule at top
+    o.append(f'<rect x="{margin}" y="80" width="60" height="2" fill="{text_primary}"/>')
 
-    margin = 100
-
-    # Title with word wrap (large, readable on phone)
+    # Title in Cormorant Garamond italic
     words = title.split()
     lines = []
     cur = ""
     for word in words:
         test = (cur + " " + word).strip()
-        if len(test) > 20 and cur:
+        if len(test) > 22 and cur:
             lines.append(cur)
             cur = word
         else:
@@ -422,19 +435,43 @@ def generate_social_card(title, data, w=1080, h=1080):
 
     ty = 160
     for i, line in enumerate(lines):
-        o.append(f'<text x="{margin}" y="{ty + i * 64}" fill="{DARK_TEXT_PRIMARY}" font-family="{FONT_TITLE}" font-size="52" font-weight="700">{escape_xml(line)}</text>')
+        o.append(f'<text x="{margin}" y="{ty + i * 58}" fill="{text_primary}" font-family="{f_display}" font-size="46" font-style="italic" font-weight="400">{escape_xml(line)}</text>')
 
-    # Stat block (big number + label, both phone-legible)
-    stat_y = ty + len(lines) * 64 + 80
-    o.append(f'<text x="{margin}" y="{stat_y}" fill="{FREQ_PURPLE}" font-family="{FONT_BODY}" font-size="96" font-weight="800">{escape_xml(stat_value)}</text>')
-    o.append(f'<text x="{margin}" y="{stat_y + 56}" fill="{DARK_TEXT_SECONDARY}" font-family="{FONT_BODY}" font-size="30">{escape_xml(stat_label)}</text>')
+    # Stat card (off-white background box with stat inside)
+    card_y = ty + len(lines) * 58 + 50
+    card_h = 240
+    card_w = w - margin * 2
+    o.append(f'<rect x="{margin}" y="{card_y}" width="{card_w}" height="{card_h}" fill="{off_white}" stroke="{warm_gray}" stroke-width="1" rx="0"/>')
 
-    # Optional body text lines (for slides with more context)
+    # Stat number inside card
+    o.append(f'<text x="{margin + 40}" y="{card_y + 80}" fill="{text_primary}" font-family="{f_sans}" font-size="72" font-weight="800">{escape_xml(stat_value)}</text>')
+
+    # Stat label inside card
+    label_words = stat_label.split()
+    label_lines = []
+    cur = ""
+    for word in label_words:
+        test = (cur + " " + word).strip()
+        if len(test) > 45 and cur:
+            label_lines.append(cur)
+            cur = word
+        else:
+            cur = test
+    if cur:
+        label_lines.append(cur)
+
+    for i, ll in enumerate(label_lines):
+        o.append(f'<text x="{margin + 40}" y="{card_y + 120 + i * 28}" fill="{text_body}" font-family="{f_body}" font-size="22">{escape_xml(ll)}</text>')
+
+    # Optional body text below the card
     if body_lines:
-        body_y = stat_y + 56 + 70
+        body_y = card_y + card_h + 50
         for bl in body_lines:
-            o.append(f'<text x="{margin}" y="{body_y}" fill="{DARK_TEXT_MUTED}" font-family="{FONT_BODY}" font-size="28">{escape_xml(bl)}</text>')
-            body_y += 40
+            o.append(f'<text x="{margin}" y="{body_y}" fill="{text_muted}" font-family="{f_body}" font-size="22">{escape_xml(bl)}</text>')
+            body_y += 34
+
+    # Page number / branding at bottom
+    o.append(f'<text x="{w / 2}" y="{h - 50}" fill="{mid_gray}" font-family="{f_sans}" font-size="9" font-weight="600" letter-spacing="5" text-anchor="middle">MASTERWORKS ACADEMY</text>')
 
     o.append("</svg>")
     return "\n".join(o)
